@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:mds_widget_book/core/helper_types.dart';
 import 'package:mds_widget_book/presentation/actions/buttons/widgets/buttons_example.dart';
 
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
@@ -9,7 +10,7 @@ import 'widgets/customizable_button.dart';
 @widgetbook.UseCase(
   path: 'Actions',
   name: 'Buttons',
-  type: Widget, //TODO:
+  type: Button,
 )
 Widget buttons(BuildContext context) {
   return const SingleChildScrollView(

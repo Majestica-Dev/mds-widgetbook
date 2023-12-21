@@ -4,7 +4,7 @@ import 'package:majestica_ds/majestica_ds.dart';
 
 import '../../../../domain/actions/button_type.dart';
 
-abstract class ActionUtils {
+abstract class ActionsUtils {
   static List<MDSButtonSize> getAbleButtonSizes({
     required ButtonType buttonType,
   }) {
@@ -73,7 +73,31 @@ abstract class ActionUtils {
     }
   }
 
-  static PhosphorIcon? showBasketballIcon({ show = true}) {
+  static Widget getCircleButtonByType({
+    required ButtonType buttonType,
+  }) {
+    switch (buttonType.name) {
+      case 'primary':
+        return PrimaryCircleButton(
+          onPressed: () {},
+          child: PhosphorIcon(
+            PhosphorIcons.power(PhosphorIconsStyle.bold),
+          ),
+        );
+
+      default:
+        return SecondaryCircleButton(
+          onPressed: () {},
+          child: PhosphorIcon(
+            PhosphorIcons.power(
+              PhosphorIconsStyle.bold,
+            ),
+          ),
+        );
+    }
+  }
+
+  static PhosphorIcon? showBasketballIcon({show = true}) {
     if (show) {
       return PhosphorIcon(
         PhosphorIcons.basketball(),

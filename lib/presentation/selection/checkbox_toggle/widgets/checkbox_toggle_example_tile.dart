@@ -1,10 +1,9 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/widgets.dart';
 
 import 'package:majestica_ds/majestica_ds.dart';
+
 import 'package:mds_widget_book/presentation/core/widgets/example_display.dart';
-import 'package:mds_widget_book/presentation/core/widgets/example_horizontal_item.dart';
+import 'package:mds_widget_book/presentation/core/widgets/example_item.dart';
 
 class CheckboxAndToggleExample extends StatefulWidget {
   const CheckboxAndToggleExample({super.key});
@@ -26,7 +25,7 @@ class _CheckboxAndToggleExampleState extends State<CheckboxAndToggleExample> {
     return ExampleDisplay(
       children: [
         //Toggle enabled
-        ExampleHorizontalItem(
+        ExampleItem(
           children: [
             const Text('Toggle of'),
             MDSToggle(
@@ -39,7 +38,7 @@ class _CheckboxAndToggleExampleState extends State<CheckboxAndToggleExample> {
             ),
           ],
         ),
-        ExampleHorizontalItem(
+        ExampleItem(
           children: [
             const Text('Toggle on'),
             MDSToggle(
@@ -54,9 +53,9 @@ class _CheckboxAndToggleExampleState extends State<CheckboxAndToggleExample> {
         ),
 
         //Toggle disapled
-        ExampleHorizontalItem(
+        ExampleItem(
           children: [
-            Text('Toggle of - disapled'),
+            const Text('Toggle of - disapled'),
             MDSToggle(
               value: false,
               enabled: false,
@@ -64,9 +63,9 @@ class _CheckboxAndToggleExampleState extends State<CheckboxAndToggleExample> {
             ),
           ],
         ),
-        ExampleHorizontalItem(
+        ExampleItem(
           children: [
-            Text('Toggle on - disapled'),
+            const Text('Toggle on - disapled'),
             MDSToggle(
               value: true,
               enabled: false,
@@ -76,9 +75,9 @@ class _CheckboxAndToggleExampleState extends State<CheckboxAndToggleExample> {
         ),
 
         //CheckBox unchecked
-        ExampleHorizontalItem(
+        ExampleItem(
           children: [
-            Text('CheckBox unchecked'),
+            const Text('CheckBox unchecked'),
             MDSCheckBox(
               onChanged: (value) {
                 setState(() {
@@ -89,9 +88,9 @@ class _CheckboxAndToggleExampleState extends State<CheckboxAndToggleExample> {
             ),
           ],
         ),
-        ExampleHorizontalItem(
+        ExampleItem(
           children: [
-            Text('CheckBox unchecked - disapled'),
+            const Text('CheckBox unchecked - disapled'),
             MDSCheckBox(
               value: false,
               enabled: false,
@@ -101,9 +100,9 @@ class _CheckboxAndToggleExampleState extends State<CheckboxAndToggleExample> {
         ),
 
         //CheckBox checked
-        ExampleHorizontalItem(
+        ExampleItem(
           children: [
-            Text('CheckBox checked'),
+            const Text('CheckBox checked'),
             MDSCheckBox(
               value: chechkBoxCheckedValue,
               onChanged: (value) {
@@ -114,9 +113,9 @@ class _CheckboxAndToggleExampleState extends State<CheckboxAndToggleExample> {
             ),
           ],
         ),
-        ExampleHorizontalItem(
+        ExampleItem(
           children: [
-            Text('CheckBox checked - disapled'),
+            const Text('CheckBox checked - disapled'),
             MDSCheckBox(
               enabled: false,
               value: true,

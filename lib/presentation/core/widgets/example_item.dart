@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:majestica_ds/majestica_ds.dart';
 
-class ExampleHorizontalItem extends StatelessWidget {
+class ExampleItem extends StatelessWidget {
   final List<Widget> children;
   final MainAxisAlignment mainAxisAlignment;
 
-  const ExampleHorizontalItem({
+  const ExampleItem({
     required this.children,
     this.mainAxisAlignment = MainAxisAlignment.spaceBetween,
     super.key,

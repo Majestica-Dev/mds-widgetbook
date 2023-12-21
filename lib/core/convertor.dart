@@ -3,7 +3,7 @@ import 'package:majestica_ds/majestica_ds.dart';
 
 import '../domain/actions/button_type.dart';
 
-abstract class Convertors {
+abstract class Convertor {
   static MDSButtonSize stringToButtonSize(String size) {
     switch (size) {
       case 'L':

@@ -1,12 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:majestica_ds/majestica_ds.dart';
 
+import 'package:mds_widget_book/presentation/actions/core/utils/action_utils.dart';
 import 'package:mds_widget_book/presentation/core/widgets/example_display.dart';
-import 'package:mds_widget_book/presentation/core/widgets/example_horizontal_item.dart';
-
-import '../../core/utils/action_utils.dart';
+import 'package:mds_widget_book/presentation/core/widgets/example_item.dart';
 
 class ButtonsExample extends StatelessWidget {
   const ButtonsExample({super.key});
@@ -15,7 +13,7 @@ class ButtonsExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return ExampleDisplay(
       children: [
-        ExampleHorizontalItem(
+        ExampleItem(
           children: [
             Expanded(
               child: SecondaryButton(
@@ -34,7 +32,7 @@ class ButtonsExample extends StatelessWidget {
             )
           ],
         ),
-        ExampleHorizontalItem(
+        ExampleItem(
           children: [
             SecondaryButton(
               buttonSize: MDSButtonSize.L,
@@ -51,7 +49,7 @@ class ButtonsExample extends StatelessWidget {
             ),
           ],
         ),
-        ExampleHorizontalItem(
+        ExampleItem(
           children: [
             Expanded(
               child: PrimaryButton(
@@ -62,7 +60,7 @@ class ButtonsExample extends StatelessWidget {
             ),
           ],
         ),
-        ExampleHorizontalItem(
+        ExampleItem(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             PrimaryButton(
@@ -72,11 +70,11 @@ class ButtonsExample extends StatelessWidget {
             ),
           ],
         ),
-        ExampleHorizontalItem(
+        ExampleItem(
           children: [
             Expanded(
               child: SecondaryButton(
-                leftIcon: ActionUtils.showBasketballIcon(),
+                leftIcon: ActionsUtils.showBasketballIcon(),
                 text: 'Button',
                 onPressed: () {},
               ),
@@ -84,35 +82,35 @@ class ButtonsExample extends StatelessWidget {
             const SizedBox(width: 12),
             Expanded(
               child: SecondaryButton(
-                leftIcon: ActionUtils.showBasketballIcon(),
+                leftIcon: ActionsUtils.showBasketballIcon(),
                 text: 'Button',
                 onPressed: () {},
               ),
             )
           ],
         ),
-        ExampleHorizontalItem(
+        ExampleItem(
           children: [
             Expanded(
               child: PrimaryButton(
-                leftIcon: ActionUtils.showBasketballIcon(),
+                leftIcon: ActionsUtils.showBasketballIcon(),
                 text: 'Button',
                 onPressed: () {},
               ),
             ),
             const SizedBox(width: 12),
             SecondaryButton(
-              leftIcon: ActionUtils.showBasketballIcon(),
+              leftIcon: ActionsUtils.showBasketballIcon(),
               text: 'Button',
               onPressed: () {},
             )
           ],
         ),
-        ExampleHorizontalItem(
+        ExampleItem(
           children: [
             Expanded(
               child: PrimaryButton(
-                leftIcon: ActionUtils.showBasketballIcon(),
+                leftIcon: ActionsUtils.showBasketballIcon(),
                 text: 'Button',
                 buttonSize: MDSButtonSize.S,
                 onPressed: () {},
@@ -120,14 +118,14 @@ class ButtonsExample extends StatelessWidget {
             ),
             const SizedBox(width: 8),
             SecondaryButton(
-              leftIcon: ActionUtils.showBasketballIcon(),
+              leftIcon: ActionsUtils.showBasketballIcon(),
               text: 'Button',
               buttonSize: MDSButtonSize.S,
               onPressed: () {},
             ),
             const SizedBox(width: 8),
             SecondaryButton(
-              leftIcon: ActionUtils.showBasketballIcon(),
+              leftIcon: ActionsUtils.showBasketballIcon(),
               text: 'Button',
               buttonSize: MDSButtonSize.S,
               onPressed: () {},
@@ -137,7 +135,6 @@ class ButtonsExample extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: SizedBox(
-            height: 51,
             width: double.infinity,
             child: PrimaryButton(
               text: 'Button',

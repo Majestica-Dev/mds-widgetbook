@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:mds_widget_book/core/helper_types.dart';
 
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
@@ -7,9 +8,9 @@ import 'widgets/customizable_checkbox.dart';
 import 'widgets/customizable_toggle.dart';
 
 @widgetbook.UseCase(
-  path: 'Actions',
-  name: 'CheckBox and Toggle', //TODO : renaming
-  type: Widget,
+  path: 'Selection',
+  name: 'CheckBox and Toggle',
+  type: Selector,
 )
 Widget checkboxAndToggle(BuildContext context) {
   return const Padding(
@@ -18,15 +19,13 @@ Widget checkboxAndToggle(BuildContext context) {
       children: [
         Flexible(child: CheckboxAndToggleExample()),
         SizedBox(width: 50),
-        Flexible(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              CustomizableToggle(),
-              CustomizableCheckbox(),
-            ],
-          ),
-        )
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            CustomizableToggle(),
+            CustomizableCheckbox(),
+          ],
+        ),
       ],
     ),
   );

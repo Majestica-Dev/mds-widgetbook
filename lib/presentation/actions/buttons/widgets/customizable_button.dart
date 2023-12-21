@@ -21,7 +21,7 @@ class CustomizableButton extends StatelessWidget {
         'Text',
       ],
     );
-    final ButtonType buttonType = Convertors.stringToButtonType(
+    final ButtonType buttonType = Convertor.stringToButtonType(
       buttonTypeOption,
     );
 
@@ -46,16 +46,19 @@ class CustomizableButton extends StatelessWidget {
       initialOption: 'M',
       label: 'Size',
       description: 'for text type is suported only L and M',
-      options: ActionUtils.getAbleButtonSizesAsString(buttonType: buttonType),
+      options: ActionsUtils.getAbleButtonSizesAsString(buttonType: buttonType),
     );
-    final MDSButtonSize buttonSize = Convertors.stringToButtonSize(
+    final MDSButtonSize buttonSize = Convertor.stringToButtonSize(
       buttonSizeOption,
     );
 
     final String colorModeOption = context.knobs.list(
       label: 'Color Mode',
       description: 'supports only  Secondary type',
-      options: ['Primary', 'Secondary'],
+      options: [
+        'Primary',
+        'Secondary',
+      ],
     );
 
     final String axisOption = context.knobs.list(
@@ -65,18 +68,18 @@ class CustomizableButton extends StatelessWidget {
         'Vertical',
       ],
     );
-    final Axis axis = Convertors.stringToAxis(axisOption);
+    final Axis axis = Convertor.stringToAxis(axisOption);
 
-    ColorMode colorMode = Convertors.stringToColorMode(colorModeOption);
+    ColorMode colorMode = Convertor.stringToColorMode(colorModeOption);
     return Center(
-      child: ActionUtils.getButtonByType(
+      child: ActionsUtils.getButtonByType(
         buttonType: buttonType,
         disabled: disabled,
         axis: axis,
         buttonSize: buttonSize,
         text: text,
-        leftIcon: ActionUtils.showBasketballIcon(show: showLeftIcon),
-        rightIcon: ActionUtils.showBasketballIcon(show: showRigtIcon),
+        leftIcon: ActionsUtils.showBasketballIcon(show: showLeftIcon),
+        rightIcon: ActionsUtils.showBasketballIcon(show: showRigtIcon),
         colorMode: colorMode,
       ),
     );

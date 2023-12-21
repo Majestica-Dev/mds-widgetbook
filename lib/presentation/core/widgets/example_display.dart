@@ -21,7 +21,10 @@ class ExampleDisplay extends StatelessWidget {
         borderRadius: BorderRadius.circular(25),
       ),
       child: Column(
-        children: [const SizedBox(height: 21), ...children],
+        children: [
+          const SizedBox(height: 21),
+          ...children,
+        ],
       ),
     );
   }
