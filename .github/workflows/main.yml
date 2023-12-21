@@ -36,10 +36,12 @@ jobs:
         run: flutter build web --release
 
       - name: Checkout
-        run: | 
+        run: |
+          git remote add origin https://github.com/Majestica-Dev/mds-widgetbook.git
           git checkout -b gh-pages
           git config --global user.email "narek.w7@gmail.com"
           git config --global user.name "Deploy"
+          
           git add .
           git commit -m 'test'
           git push
