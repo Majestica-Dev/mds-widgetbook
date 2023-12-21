@@ -19,7 +19,7 @@ jobs:
           flutter-version: '3.16.5' 
 
       - name: Disable Git Analytics
-        run: git config --global --unset-all http.https://github.com/.extraheader
+        run: flutter config --disable-analytics
 
       - name: Install Dependencies
         run: flutter pub get
