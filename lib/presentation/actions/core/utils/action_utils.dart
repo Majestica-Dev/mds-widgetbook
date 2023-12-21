@@ -4,7 +4,7 @@ import 'package:majestica_ds/majestica_ds.dart';
 
 import '../../../../domain/actions/button_type.dart';
 
-abstract class ActionUtils {
+abstract class ActionsUtils {
   static List<MDSButtonSize> getAbleButtonSizes({
     required ButtonType buttonType,
   }) {
@@ -19,20 +19,6 @@ abstract class ActionUtils {
     }
   }
 
-  static List<String> getAbleButtonSizesAsString({
-    required ButtonType buttonType,
-  }) {
-    switch (buttonType) {
-      case ButtonType.text:
-        return [
-          'L',
-          'M',
-        ];
-      default:
-        return ['L', 'M', 'S', 'XS'];
-    }
-  }
-
   static Widget getButtonByType({
     required ButtonType buttonType,
     bool disabled = false,
@@ -43,8 +29,8 @@ abstract class ActionUtils {
     Widget? rightIcon,
     ColorMode colorMode = ColorMode.primary,
   }) {
-    switch (buttonType.name) {
-      case 'primary':
+    switch (buttonType) {
+      case ButtonType.primary:
         return PrimaryButton(
           disabled: disabled,
           axis: axis,
@@ -54,7 +40,7 @@ abstract class ActionUtils {
           leftIcon: leftIcon,
           rightIcon: rightIcon,
         );
-      case 'secondary':
+      case ButtonType.secondary:
         return SecondaryButton(
           onPressed: () {},
           axis: axis,
@@ -65,7 +51,7 @@ abstract class ActionUtils {
           leftIcon: leftIcon,
           rightIcon: rightIcon,
         );
-      default:
+      case ButtonType.text:
         return MDSTextButton(
           onPressed: () {},
           text: text ?? '',
@@ -75,7 +61,31 @@ abstract class ActionUtils {
     }
   }
 
-  static PhosphorIcon? showIcon({required bool show}) {
+  static Widget getCircleButtonByType({
+    required ButtonType buttonType,
+  }) {
+    switch (buttonType) {
+      case ButtonType.primary:
+        return PrimaryCircleButton(
+          onPressed: () {},
+          child: PhosphorIcon(
+            PhosphorIcons.power(PhosphorIconsStyle.bold),
+          ),
+        );
+
+      default:
+        return SecondaryCircleButton(
+          onPressed: () {},
+          child: PhosphorIcon(
+            PhosphorIcons.power(
+              PhosphorIconsStyle.bold,
+            ),
+          ),
+        );
+    }
+  }
+
+  static PhosphorIcon? showBasketballIcon({show = true}) {
     if (show) {
       return PhosphorIcon(
         PhosphorIcons.basketball(),
