@@ -5,12 +5,12 @@ import 'package:majestica_ds/majestica_ds.dart';
 import 'package:mds_widget_book/presentation/actions/core/utils/action_utils.dart';
 import '../../../../domain/actions/button_type.dart';
 
-class ButtonsExampleItem extends StatelessWidget {
+class ButtonsCollectionTile extends StatelessWidget {
   final ButtonType buttonType;
   final bool disabled;
   final ColorMode colorMode;
 
-  const ButtonsExampleItem({
+  const ButtonsCollectionTile({
     required this.buttonType,
     this.disabled = false,
     this.colorMode = ColorMode.primary,

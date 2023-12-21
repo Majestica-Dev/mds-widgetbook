@@ -24,10 +24,8 @@ abstract class ActionUtils {
   }) {
     switch (buttonType) {
       case ButtonType.text:
-        return [
-          'L',
-          'M',
-        ];
+        return ['L', 'M'];
+
       default:
         return ['L', 'M', 'S', 'XS'];
     }
@@ -75,7 +73,7 @@ abstract class ActionUtils {
     }
   }
 
-  static PhosphorIcon? showIcon({required bool show}) {
+  static PhosphorIcon? showBasketballIcon({ show = true}) {
     if (show) {
       return PhosphorIcon(
         PhosphorIcons.basketball(),

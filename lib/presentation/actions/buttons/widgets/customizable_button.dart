@@ -55,10 +55,7 @@ class CustomizableButton extends StatelessWidget {
     final String colorModeOption = context.knobs.list(
       label: 'Color Mode',
       description: 'supports only  Secondary type',
-      options: [
-        ColorMode.primary.name,
-        ColorMode.neutral.name,
-      ],
+      options: ['Primary', 'Secondary'],
     );
 
     final String axisOption = context.knobs.list(
@@ -71,15 +68,17 @@ class CustomizableButton extends StatelessWidget {
     final Axis axis = Convertors.stringToAxis(axisOption);
 
     ColorMode colorMode = Convertors.stringToColorMode(colorModeOption);
-    return ActionUtils.getButtonByType(
-      buttonType: buttonType,
-      disabled: disabled,
-      axis: axis,
-      buttonSize: buttonSize,
-      text: text,
-      leftIcon: ActionUtils.showIcon(show: showLeftIcon),
-      rightIcon: ActionUtils.showIcon(show: showRigtIcon),
-      colorMode: colorMode,
+    return Center(
+      child: ActionUtils.getButtonByType(
+        buttonType: buttonType,
+        disabled: disabled,
+        axis: axis,
+        buttonSize: buttonSize,
+        text: text,
+        leftIcon: ActionUtils.showBasketballIcon(show: showLeftIcon),
+        rightIcon: ActionUtils.showBasketballIcon(show: showRigtIcon),
+        colorMode: colorMode,
+      ),
     );
   }
 }

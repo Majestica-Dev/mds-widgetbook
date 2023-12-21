@@ -1,19 +1,20 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/widgets.dart';
 
 import 'package:majestica_ds/majestica_ds.dart';
+import 'package:mds_widget_book/presentation/core/widgets/example_display.dart';
+import 'package:mds_widget_book/presentation/core/widgets/example_horizontal_item.dart';
 
-import 'checkbox_toggle_example_item.dart';
-
-class CheckboxAndToggleExampleTile extends StatefulWidget {
-  const CheckboxAndToggleExampleTile({super.key});
+class CheckboxAndToggleExample extends StatefulWidget {
+  const CheckboxAndToggleExample({super.key});
 
   @override
-  State<CheckboxAndToggleExampleTile> createState() =>
-      _CheckboxAndToggleExampleTileState();
+  State<CheckboxAndToggleExample> createState() =>
+      _CheckboxAndToggleExampleState();
 }
 
-class _CheckboxAndToggleExampleTileState
-    extends State<CheckboxAndToggleExampleTile> {
+class _CheckboxAndToggleExampleState extends State<CheckboxAndToggleExample> {
   bool toggleOfValue = false;
   bool toggleOnValue = true;
 
@@ -22,102 +23,108 @@ class _CheckboxAndToggleExampleTileState
 
   @override
   Widget build(BuildContext context) {
-    final theme = context.mdsTheme;
-
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        color: theme.colors.background,
-        borderRadius: BorderRadius.circular(24),
-      ),
-      child: SingleChildScrollView(
-        child: Column(
+    return ExampleDisplay(
+      children: [
+        //Toggle enabled
+        ExampleHorizontalItem(
           children: [
-            //Toggle enabled
-            MDSCheckboxAndToggleExampleItem(
-              title: 'Toggle of',
-              child: MDSToggle(
-                value: toggleOfValue,
-                onChanged: (value) {
-                  setState(() {
-                    toggleOfValue = value;
-                  });
-                },
-              ),
-            ),
-            MDSCheckboxAndToggleExampleItem(
-              title: 'Toggle on',
-              child: MDSToggle(
-                value: toggleOnValue,
-                onChanged: (value) {
-                  setState(() {
-                    toggleOnValue = value;
-                  });
-                },
-              ),
-            ),
-
-            //Toggle disapled
-            MDSCheckboxAndToggleExampleItem(
-              title: 'Toggle of - disapled',
-              child: MDSToggle(
-                value: false,
-                enabled: false,
-                onChanged: (value) {},
-              ),
-            ),
-            MDSCheckboxAndToggleExampleItem(
-              title: 'Toggle on - disapled',
-              child: MDSToggle(
-                value: true,
-                enabled: false,
-                onChanged: (value) {},
-              ),
-            ),
-
-            //CheckBox unchecked
-            MDSCheckboxAndToggleExampleItem(
-              title: 'CheckBox unchecked',
-              child: MDSCheckBox(
-                onChanged: (value) {
-                  setState(() {
-                    checkBoxUnCheckedValue = value;
-                  });
-                },
-                value: checkBoxUnCheckedValue,
-              ),
-            ),
-            MDSCheckboxAndToggleExampleItem(
-              title: 'CheckBox unchecked - disapled',
-              child: MDSCheckBox(
-                value: false,
-                enabled: false,
-                onChanged: (value) {},
-              ),
-            ),
-
-            //CheckBox checked
-            MDSCheckboxAndToggleExampleItem(
-              title: 'CheckBox checked',
-              child: MDSCheckBox(
-                value: chechkBoxCheckedValue,
-                onChanged: (value) {
-                  setState(() {
-                    chechkBoxCheckedValue = value;
-                  });
-                },
-              ),
-            ),
-            MDSCheckboxAndToggleExampleItem(
-              title: 'CheckBox checked - disapled',
-              child: MDSCheckBox(
-                enabled: false,
-                value: true,
-                onChanged: (value) {},
-              ),
+            const Text('Toggle of'),
+            MDSToggle(
+              value: toggleOfValue,
+              onChanged: (value) {
+                setState(() {
+                  toggleOfValue = value;
+                });
+              },
             ),
           ],
         ),
-      ),
+        ExampleHorizontalItem(
+          children: [
+            const Text('Toggle on'),
+            MDSToggle(
+              value: toggleOnValue,
+              onChanged: (value) {
+                setState(() {
+                  toggleOnValue = value;
+                });
+              },
+            ),
+          ],
+        ),
+
+        //Toggle disapled
+        ExampleHorizontalItem(
+          children: [
+            Text('Toggle of - disapled'),
+            MDSToggle(
+              value: false,
+              enabled: false,
+              onChanged: (value) {},
+            ),
+          ],
+        ),
+        ExampleHorizontalItem(
+          children: [
+            Text('Toggle on - disapled'),
+            MDSToggle(
+              value: true,
+              enabled: false,
+              onChanged: (value) {},
+            ),
+          ],
+        ),
+
+        //CheckBox unchecked
+        ExampleHorizontalItem(
+          children: [
+            Text('CheckBox unchecked'),
+            MDSCheckBox(
+              onChanged: (value) {
+                setState(() {
+                  checkBoxUnCheckedValue = value;
+                });
+              },
+              value: checkBoxUnCheckedValue,
+            ),
+          ],
+        ),
+        ExampleHorizontalItem(
+          children: [
+            Text('CheckBox unchecked - disapled'),
+            MDSCheckBox(
+              value: false,
+              enabled: false,
+              onChanged: (value) {},
+            ),
+          ],
+        ),
+
+        //CheckBox checked
+        ExampleHorizontalItem(
+          children: [
+            Text('CheckBox checked'),
+            MDSCheckBox(
+              value: chechkBoxCheckedValue,
+              onChanged: (value) {
+                setState(() {
+                  chechkBoxCheckedValue = value;
+                });
+              },
+            ),
+          ],
+        ),
+        ExampleHorizontalItem(
+          children: [
+            Text('CheckBox checked - disapled'),
+            MDSCheckBox(
+              enabled: false,
+              value: true,
+              onChanged: (value) {},
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

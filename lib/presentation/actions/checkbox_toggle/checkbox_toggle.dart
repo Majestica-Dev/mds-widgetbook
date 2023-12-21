@@ -16,7 +16,7 @@ Widget checkboxAndToggle(BuildContext context) {
     padding: EdgeInsets.all(60),
     child: Row(
       children: [
-        Flexible(child: CheckboxAndToggleExampleTile()),
+        Flexible(child: CheckboxAndToggleExample()),
         SizedBox(width: 50),
         Flexible(
           child: Column(
