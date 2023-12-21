@@ -19,7 +19,6 @@ dependencies:
     git:
       url: https://github.com/Majestica-Dev/design-system.git
       ref: main
-      path: packages/design_system
   flutter_lints: ^3.0.1
 
 dev_dependencies:
