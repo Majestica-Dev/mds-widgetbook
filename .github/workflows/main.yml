@@ -39,7 +39,7 @@ jobs:
           git config --global user.name "Deploy"
 
           # Create a temporary branch
-          git checkout -b gh-pages-temp
+          git checkout gh-pages
 
           # Move the contents of the build/web folder to the root of the repository
           mv build/web/* .
@@ -47,7 +47,7 @@ jobs:
           # Commit the changes
           git add .
           git commit -m 'Deploy to GitHub Pages'
-          git push origin gh-pages-temp
+          git push origin gh-pages
 
   deploy:
     runs-on: ubuntu-latest
