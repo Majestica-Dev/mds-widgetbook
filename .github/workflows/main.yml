@@ -39,7 +39,7 @@ jobs:
         run: git config --global url."https://${ secrets.GH_TOKEN }@github.com/".insteadOf "https://github.com/"
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/gh-pages@v3
         with:
           github_token: ${ secrets.GH_TOKEN }
           publish_dir: build/web
