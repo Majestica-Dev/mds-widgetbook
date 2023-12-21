@@ -1,25 +1,24 @@
 name: mds_widget_book
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: '>=3.2.3 <4.0.0'
+  sdk: ">=3.2.3 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  copy_with_extension: ^5.0.4 
-  equatable: ^2.0.5 
+  copy_with_extension: ^5.0.4
+  equatable: ^2.0.5
   flutter_bloc: ^8.1.3
   widgetbook: ^3.7.0
   widgetbook_annotation: ^3.1.0
 
   majestica_ds:
     git:
-      url: https://github.com/hmarat/design-system.git
+      url: https://github.com/Majestica-Dev/design-system.git
   flutter_lints: ^3.0.1
-  
 
 dev_dependencies:
   flutter_test:
