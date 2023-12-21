@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:majestica_ds/majestica_ds.dart';
-import 'package:mds_widget_book/core/convertor.dart';
 import 'package:mds_widget_book/domain/actions/button_type.dart';
 import 'package:mds_widget_book/presentation/actions/core/utils/action_utils.dart';
 
@@ -13,18 +12,15 @@ class CustomizableButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String buttonTypeOption = context.knobs.list(
+    final ButtonType buttonType = context.knobs.list(
       label: 'Type',
       options: [
-        'Primary',
-        'Secondary',
-        'Text',
+        ButtonType.primary,
+        ButtonType.secondary,
+        ButtonType.text,
       ],
+      labelBuilder: (value) => value.name,
     );
-    final ButtonType buttonType = Convertor.stringToButtonType(
-      buttonTypeOption,
-    );
-
     final bool disabled = context.knobs.boolean(
       label: 'State',
       description: 'is disabled',
@@ -42,35 +38,30 @@ class CustomizableButton extends StatelessWidget {
       initialValue: true,
     );
 
-    final String buttonSizeOption = context.knobs.list(
-      initialOption: 'M',
+    final MDSButtonSize buttonSize = context.knobs.list(
+      initialOption: MDSButtonSize.M,
       label: 'Size',
       description: 'for text type is suported only L and M',
-      options: ActionsUtils.getAbleButtonSizesAsString(buttonType: buttonType),
-    );
-    final MDSButtonSize buttonSize = Convertor.stringToButtonSize(
-      buttonSizeOption,
+      options: ActionsUtils.getAbleButtonSizes(buttonType: buttonType),
+      labelBuilder: (value) => value.name,
     );
 
-    final String colorModeOption = context.knobs.list(
+    final ColorMode colorMode = context.knobs.list(
       label: 'Color Mode',
       description: 'supports only  Secondary type',
       options: [
-        'Primary',
-        'Secondary',
+        ColorMode.primary,
+        ColorMode.neutral,
       ],
+      labelBuilder: (value) => value.name,
     );
 
-    final String axisOption = context.knobs.list(
+    final Axis axis = context.knobs.list(
       label: 'Axis',
-      options: [
-        'Horizontal',
-        'Vertical',
-      ],
+      options: [Axis.horizontal, Axis.vertical],
+      labelBuilder: (value) => value.name,
     );
-    final Axis axis = Convertor.stringToAxis(axisOption);
 
-    ColorMode colorMode = Convertor.stringToColorMode(colorModeOption);
     return Center(
       child: ActionsUtils.getButtonByType(
         buttonType: buttonType,

@@ -20,11 +20,13 @@ class ExampleDisplay extends StatelessWidget {
         border: Border.all(color: colors.neutralLowContent),
         borderRadius: BorderRadius.circular(25),
       ),
-      child: Column(
-        children: [
-          const SizedBox(height: 21),
-          ...children,
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(height: 21),
+            ...children,
+          ],
+        ),
       ),
     );
   }

@@ -32,42 +32,34 @@ class CircleButtonExample extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 91),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: PrimaryCircleButton(
-                        onPressed: () {},
-                        child: PhosphorIcon(
-                          PhosphorIcons.power(PhosphorIconsStyle.bold),
-                        ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  PrimaryCircleButton(
+                    onPressed: () {},
+                    child: PhosphorIcon(
+                      PhosphorIcons.power(PhosphorIconsStyle.bold),
+                    ),
+                  ),
+                  const SizedBox(width: 16),
+                  SecondaryCircleButton(
+                    onPressed: () {},
+                    child: PhosphorIcon(
+                      PhosphorIcons.plus(
+                        PhosphorIconsStyle.bold,
                       ),
                     ),
-                    const SizedBox(width: 16),
-                    Expanded(
-                      child: SecondaryCircleButton(
-                        onPressed: () {},
-                        child: PhosphorIcon(
-                          PhosphorIcons.plus(
-                            PhosphorIconsStyle.bold,
-                          ),
-                        ),
+                  ),
+                  const SizedBox(width: 16),
+                  SecondaryCircleButton(
+                    onPressed: () {},
+                    child: PhosphorIcon(
+                      PhosphorIcons.user(
+                        PhosphorIconsStyle.bold,
                       ),
                     ),
-                    const SizedBox(width: 16),
-                    Expanded(
-                      child: SecondaryCircleButton(
-                        onPressed: () {},
-                        child: PhosphorIcon(
-                          PhosphorIcons.user(
-                            PhosphorIconsStyle.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
               const SizedBox(
                 height: 16,

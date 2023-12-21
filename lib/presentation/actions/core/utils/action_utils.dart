@@ -19,18 +19,6 @@ abstract class ActionsUtils {
     }
   }
 
-  static List<String> getAbleButtonSizesAsString({
-    required ButtonType buttonType,
-  }) {
-    switch (buttonType) {
-      case ButtonType.text:
-        return ['L', 'M'];
-
-      default:
-        return ['L', 'M', 'S', 'XS'];
-    }
-  }
-
   static Widget getButtonByType({
     required ButtonType buttonType,
     bool disabled = false,
@@ -41,8 +29,8 @@ abstract class ActionsUtils {
     Widget? rightIcon,
     ColorMode colorMode = ColorMode.primary,
   }) {
-    switch (buttonType.name) {
-      case 'primary':
+    switch (buttonType) {
+      case ButtonType.primary:
         return PrimaryButton(
           disabled: disabled,
           axis: axis,
@@ -52,7 +40,7 @@ abstract class ActionsUtils {
           leftIcon: leftIcon,
           rightIcon: rightIcon,
         );
-      case 'secondary':
+      case ButtonType.secondary:
         return SecondaryButton(
           onPressed: () {},
           axis: axis,
@@ -63,7 +51,7 @@ abstract class ActionsUtils {
           leftIcon: leftIcon,
           rightIcon: rightIcon,
         );
-      default:
+      case ButtonType.text:
         return MDSTextButton(
           onPressed: () {},
           text: text ?? '',
@@ -76,8 +64,8 @@ abstract class ActionsUtils {
   static Widget getCircleButtonByType({
     required ButtonType buttonType,
   }) {
-    switch (buttonType.name) {
-      case 'primary':
+    switch (buttonType) {
+      case ButtonType.primary:
         return PrimaryCircleButton(
           onPressed: () {},
           child: PhosphorIcon(
