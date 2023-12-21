@@ -36,7 +36,7 @@ jobs:
       - name: Commit and Push Built Web Folder
         run: |
           git config --global user.email "narek.w7@gmail.com"
-          git config --global user.name "Deploy"
+          git config --global user.name "Deployer"
 
           # Create a temporary branch
           git checkout -b gh-pages-temp
