@@ -24,11 +24,23 @@ jobs:
       - name: Disable Git Analytics
         run: flutter config --disable-analytics
 
+     
+
+      - name: Flutter Config Web
+        run: flutter config --enable-web
+
       - name: Install Dependencies
         run: flutter pub get
 
       - name: Build Web
-        run: flutter build web
+        run: flutter build web --release
+
+      - name: Checkout
+        run: | 
+          git checkout -b gh-pages
+          git add .
+          git commit -m 'test'
+          git push
 
   deploy:
     runs-on: ubuntu-latest
