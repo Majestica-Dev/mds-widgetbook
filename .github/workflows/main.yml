@@ -18,6 +18,10 @@ jobs:
         with:
           flutter-version: '3.16.5' 
 
+      - name: Set up Git with PAT
+        run: git config --global url."https://${{ secrets.GH_TOKEN }}@github.com/".insteadOf "https://github.com/"
+
+
       - name: Disable Git Analytics
         run: flutter config --disable-analytics
 
