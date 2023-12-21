@@ -369,7 +369,7 @@ packages:
       path: "."
       ref: HEAD
       resolved-ref: "35f74e27a3fd8b11aeec7925ba8adddbe89f9401"
-      url: "https://github.com/hmarat/design-system.git"
+      url: "https://github.com/Majestica-Dev/design-system.git"
     source: git
     version: "1.0.0"
   matcher:
