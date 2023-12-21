@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:widgetbook/widgetbook.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
-import '../../application/theme/theme_cubit.dart';
+import 'package:mds_widget_book/application/theme/theme_cubit.dart';
 
 @widgetbook.UseCase(
   name: 'Theme',
