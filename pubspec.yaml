@@ -1,35 +1,31 @@
-name: Flutter Web Deploy
+name: mds_widget_book
+description: "A new Flutter project."
+publish_to: "none"
+version: 0.1.0
 
-on:
-  push:
-    branches:
-      - main
+environment:
+  sdk: ">=3.2.3 <4.0.0"
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+dependencies:
+  flutter:
+    sdk: flutter
+  copy_with_extension: ^5.0.4
+  equatable: ^2.0.5
+  flutter_bloc: ^8.1.3
+  widgetbook: ^3.7.0
+  widgetbook_annotation: ^3.1.0
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+  majestica_ds:
+    git:
+      url: https://github.com/Majestica-Dev/design-system.git
+  flutter_lints: ^3.0.1
 
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '<desired-flutter-version>' # Specify the Flutter version you want to use
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.7
+  widgetbook_generator: ^3.7.0
+  copy_with_extension_gen: ^5.0.4
 
-      - name: Install Dependencies
-        run: flutter pub get
-
-      - name: Build Web
-        run: flutter build web
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build/web
+flutter:
+  uses-material-design: true
