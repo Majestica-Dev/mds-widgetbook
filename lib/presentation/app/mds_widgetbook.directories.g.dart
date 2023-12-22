@@ -13,13 +13,15 @@ import 'package:mds_widget_book/presentation/actions/buttons/buttons.dart'
     as _i2;
 import 'package:mds_widget_book/presentation/actions/circle_button/circle_button.dart'
     as _i3;
-import 'package:mds_widget_book/presentation/navigation/dot_tab_bar.dart/dot_tab_bar.dart'
+import 'package:mds_widget_book/presentation/navigation/bottom_nav_bar/bottom_nav_bar.dart'
     as _i4;
-import 'package:mds_widget_book/presentation/navigation/tab_bar/tab_bar.dart'
+import 'package:mds_widget_book/presentation/navigation/dot_tab_bar/dot_tab_bar.dart'
     as _i5;
-import 'package:mds_widget_book/presentation/selection/checkbox_toggle/checkbox_toggle.dart'
+import 'package:mds_widget_book/presentation/navigation/tab_bar/tab_bar.dart'
     as _i6;
-import 'package:mds_widget_book/presentation/theme/theme.dart' as _i7;
+import 'package:mds_widget_book/presentation/selection/checkbox_toggle/checkbox_toggle.dart'
+    as _i7;
+import 'package:mds_widget_book/presentation/theme/theme.dart' as _i8;
 import 'package:widgetbook/widgetbook.dart' as _i1;
 
 final directories = <_i1.WidgetbookNode>[
@@ -48,25 +50,29 @@ final directories = <_i1.WidgetbookNode>[
         name: 'Bar',
         useCases: [
           _i1.WidgetbookUseCase(
+            name: 'BottomNavBar',
+            builder: _i4.bottomNavBar,
+          ),
+          _i1.WidgetbookUseCase(
             name: 'DotTabBar',
-            builder: _i4.tapBar,
+            builder: _i5.tapBar,
           ),
           _i1.WidgetbookUseCase(
             name: 'TabBar',
-            builder: _i5.tapBar,
+            builder: _i6.tapBar,
           ),
         ],
       )
     ],
   ),
   _i1.WidgetbookFolder(
-    name: 'Selections',
+    name: 'Selection',
     children: [
       _i1.WidgetbookLeafComponent(
         name: 'Selector',
         useCase: _i1.WidgetbookUseCase(
           name: 'CheckBox and Toggle',
-          builder: _i6.checkboxAndToggle,
+          builder: _i7.checkboxAndToggle,
         ),
       )
     ],
@@ -78,7 +84,7 @@ final directories = <_i1.WidgetbookNode>[
         name: 'MDSTheme',
         useCase: _i1.WidgetbookUseCase(
           name: 'Theme',
-          builder: _i7.widgetBookThemeChooser,
+          builder: _i8.widgetBookThemeChooser,
         ),
       )
     ],

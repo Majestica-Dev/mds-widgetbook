@@ -2,10 +2,10 @@ import 'package:flutter/widgets.dart';
 import 'package:majestica_ds/majestica_ds.dart';
 
 class ExampleDisplay extends StatelessWidget {
-  final List<Widget> children;
+  final Widget body;
 
   const ExampleDisplay({
-    required this.children,
+    required this.body,
     super.key,
   });
 
@@ -20,13 +20,9 @@ class ExampleDisplay extends StatelessWidget {
         border: Border.all(color: colors.neutralLowContent),
         borderRadius: BorderRadius.circular(25),
       ),
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            const SizedBox(height: 21),
-            ...children,
-          ],
-        ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(25),
+        child: body,
       ),
     );
   }
