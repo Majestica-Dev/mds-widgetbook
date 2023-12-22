@@ -1,3 +1,4 @@
+import 'package:equatable/equatable.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -28,23 +29,9 @@ class ThemeCubit extends Cubit<ThemeState> {
           ),
         );
 
-  void setTheme({
+  void setColor({
     required MDSColors colors,
-    required MDSSpacing spacing,
   }) {
-    emit(
-      ThemeState(
-        colors: colors,
-        textTheme: const MDSTextThemeData(
-          bodyMRegular: MDSTypography.bodyMRegular,
-          bodyMBold: MDSTypography.bodyMBold,
-          bodySRegular: MDSTypography.bodySRegular,
-          bodySBold: MDSTypography.bodySBold,
-          bodyXSRegular: MDSTypography.bodyXSRegular,
-          bodyXSBold: MDSTypography.bodyXSBold,
-        ), //TODO: default theme
-        spacing: spacing,
-      ),
-    );
+    emit(state.copyWith(colors: colors)); //TODO :
   }
 }

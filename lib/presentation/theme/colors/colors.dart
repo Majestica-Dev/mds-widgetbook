@@ -2,53 +2,45 @@ import 'package:flutter/material.dart';
 
 import 'package:majestica_ds/majestica_ds.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mds_widget_book/presentation/theme/colors/widgets/color_scheme.dart';
 import 'package:widgetbook/widgetbook.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 import 'package:mds_widget_book/application/theme/theme_cubit.dart';
 
 @widgetbook.UseCase(
-  name: 'Theme',
+  path: 'Theme',
+  name: 'Color Theme',
   type: MDSTheme,
 )
-Widget widgetBookThemeChooser(BuildContext context) {
-  final theme = context.mdsTheme;
-
-  final MDSSpacing spacing = MDSSpacing(
-    context.knobs.double.input(
-      label: 'Space',
-      initialValue: theme.spacing.x1,
-    ),
-  );
+Widget colors(BuildContext context) {
+  final t = context.mdsTheme;
 
   final MDSColors colors = MDSColors(
     background: context.knobs.color(
       label: 'Background',
-      initialValue: theme.colors.background,
+      initialValue: t.colors.background,
     ),
     surface: context.knobs.color(
       label: 'Surface',
-      initialValue: theme.colors.surface,
+      initialValue: t.colors.surface,
     ),
     highContainerContent: context.knobs.color(
       label: 'High-container-content',
-      initialValue: theme.colors.highContainerContent,
+      initialValue: t.colors.highContainerContent,
     ),
     primary: context.knobs.color(
       label: 'Primary',
-      initialValue: theme.colors.primaryHighContainer,
+      initialValue: t.colors.primaryHighContainer,
     ),
     neutral: context.knobs.color(
       label: 'Neutral',
-      initialValue: theme.colors.neutralHighContent,
+      initialValue: t.colors.neutralHighContent,
     ),
   );
-  //TODO:default value
 
-  context.read<ThemeCubit>().setTheme(
-        colors: colors,
-        spacing: spacing,
-      );
+  // TODO : (Narek) equtable for colors not working
+  context.read<ThemeCubit>().setColor(colors: colors);
 
-  return const SizedBox(); //TODO
+  return const MDSColorScheme(); //TODO
 }

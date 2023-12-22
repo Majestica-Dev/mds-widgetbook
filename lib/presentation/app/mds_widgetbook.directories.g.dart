@@ -21,7 +21,7 @@ import 'package:mds_widget_book/presentation/navigation/tab_bar/tab_bar.dart'
     as _i6;
 import 'package:mds_widget_book/presentation/selection/checkbox_toggle/checkbox_toggle.dart'
     as _i7;
-import 'package:mds_widget_book/presentation/theme/theme.dart' as _i8;
+import 'package:mds_widget_book/presentation/theme/colors/colors.dart' as _i8;
 import 'package:widgetbook/widgetbook.dart' as _i1;
 
 final directories = <_i1.WidgetbookNode>[
@@ -78,13 +78,13 @@ final directories = <_i1.WidgetbookNode>[
     ],
   ),
   _i1.WidgetbookFolder(
-    name: 'theme',
+    name: 'Theme',
     children: [
       _i1.WidgetbookLeafComponent(
         name: 'MDSTheme',
         useCase: _i1.WidgetbookUseCase(
-          name: 'Theme',
-          builder: _i8.widgetBookThemeChooser,
+          name: 'Color Theme',
+          builder: _i8.colors,
         ),
       )
     ],

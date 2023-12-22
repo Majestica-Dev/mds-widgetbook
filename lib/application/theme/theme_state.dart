@@ -1,7 +1,7 @@
 part of 'theme_cubit.dart';
 
 //TODO : default theme'
-class ThemeState {
+class ThemeState with EquatableMixin {
   final MDSColors colors;
   final MDSTextThemeData textTheme;
   final MDSSpacing spacing;
@@ -19,4 +19,19 @@ class ThemeState {
       spacing: spacing,
     );
   }
+
+  ThemeState copyWith({
+    MDSColors? colors,
+    MDSTextThemeData? textTheme,
+    MDSSpacing? spacing,
+  }) {
+    return ThemeState(
+      colors: colors ?? this.colors,
+      textTheme: textTheme ?? this.textTheme,
+      spacing: spacing ?? this.spacing,
+    );
+  }
+
+  @override
+  List<Object?> get props => [colors, textTheme, spacing];
 }
