@@ -51,7 +51,7 @@ final directories = <_i1.WidgetbookNode>[
         useCases: [
           _i1.WidgetbookUseCase(
             name: 'BottomNavBar',
-            builder: _i4.tapBar,
+            builder: _i4.bottomNavBar,
           ),
           _i1.WidgetbookUseCase(
             name: 'DotTabBar',
