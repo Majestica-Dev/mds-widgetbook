@@ -1,8 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:majestica_ds/icons/icons.dart';
 import 'package:majestica_ds/majestica_ds.dart';
-
-import '../../../../domain/actions/button_type.dart';
+import 'package:mds_widget_book/domain/actions/button_type.dart';
 
 abstract class ActionsUtils {
   static List<MDSButtonSize> getAbleButtonSizes({
