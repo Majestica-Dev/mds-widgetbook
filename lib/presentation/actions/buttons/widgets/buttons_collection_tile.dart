@@ -32,6 +32,8 @@ class ButtonsCollectionTile extends StatelessWidget {
               colorMode: colorMode,
               buttonType: buttonType,
               text: 'Button',
+              leftIcon: ActionsUtils.showBasketballIcon(),
+              rightIcon: ActionsUtils.showBasketballIcon(),
             ),
           ),
       ],

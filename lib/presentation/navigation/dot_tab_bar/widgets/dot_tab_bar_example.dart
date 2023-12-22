@@ -27,15 +27,17 @@ class _DotTabBarExampleState extends State<DotTabBarExample> {
         });
       },
       child: ExampleDisplay(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: MDSDotTabBar(
-              activeTabindex: activeIndex,
-              tabCount: 8,
-            ),
-          )
-        ],
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
+          child: Column(
+            children: [
+              MDSDotTabBar(
+                activeTabindex: activeIndex,
+                tabCount: 8,
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

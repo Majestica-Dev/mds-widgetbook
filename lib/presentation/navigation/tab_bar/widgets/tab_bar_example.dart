@@ -17,10 +17,11 @@ class _TabBarExampleState extends State<TabBarExample> {
   @override
   Widget build(BuildContext context) {
     final colors = context.mdsTheme.colors;
-    return ExampleDisplay(children: [
-      Padding(
+    return ExampleDisplay(
+      body: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 16,
+          vertical: 20,
         ),
         child: Container(
           width: 358,
@@ -79,7 +80,7 @@ class _TabBarExampleState extends State<TabBarExample> {
             ),
           ),
         ),
-      )
-    ]);
+      ),
+    );
   }
 }

@@ -13,61 +13,66 @@ class CircleButtonExample extends StatelessWidget {
     final colors = context.mdsTheme.colors;
 
     return ExampleDisplay(
-      children: [
-        Container(
-          width: 358,
-          decoration: BoxDecoration(
-            color: colors.surface,
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Container(
-                  height: 116,
-                  decoration: BoxDecoration(
-                    color: const Color(0xffD9D9D9),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(height: 21),
+            Container(
+              width: 358,
+              decoration: BoxDecoration(
+                color: colors.surface,
+                borderRadius: BorderRadius.circular(12),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              child: Column(
                 children: [
-                  PrimaryCircleButton(
-                    onPressed: () {},
-                    child: PhosphorIcon(
-                      PhosphorIcons.power(PhosphorIconsStyle.bold),
-                    ),
-                  ),
-                  const SizedBox(width: 16),
-                  SecondaryCircleButton(
-                    onPressed: () {},
-                    child: PhosphorIcon(
-                      PhosphorIcons.plus(
-                        PhosphorIconsStyle.bold,
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Container(
+                      height: 116,
+                      decoration: BoxDecoration(
+                        color: const Color(0xffD9D9D9),
+                        borderRadius: BorderRadius.circular(8),
                       ),
                     ),
                   ),
-                  const SizedBox(width: 16),
-                  SecondaryCircleButton(
-                    onPressed: () {},
-                    child: PhosphorIcon(
-                      PhosphorIcons.user(
-                        PhosphorIconsStyle.bold,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      PrimaryCircleButton(
+                        onPressed: () {},
+                        child: PhosphorIcon(
+                          PhosphorIcons.power(PhosphorIconsStyle.bold),
+                        ),
                       ),
-                    ),
+                      const SizedBox(width: 16),
+                      SecondaryCircleButton(
+                        onPressed: () {},
+                        child: PhosphorIcon(
+                          PhosphorIcons.plus(
+                            PhosphorIconsStyle.bold,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 16),
+                      SecondaryCircleButton(
+                        onPressed: () {},
+                        child: PhosphorIcon(
+                          PhosphorIcons.user(
+                            PhosphorIconsStyle.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 16,
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 16,
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }
