@@ -1,7 +1,9 @@
 import 'package:flutter/widgets.dart';
+
 import 'package:majestica_ds/icons/icons.dart';
 import 'package:majestica_ds/majestica_ds.dart';
 import 'package:mds_widget_book/domain/actions/button_type.dart';
+import 'package:mds_widget_book/domain/actions/circle_button_type.dart';
 
 abstract class ActionsUtils {
   static List<MDSButtonSize> getAbleButtonSizes({
@@ -61,11 +63,11 @@ abstract class ActionsUtils {
   }
 
   static Widget getCircleButtonByType({
-    required ButtonType buttonType,
+    required CircleButtonType circleButtonType,
     ColorMode colorMode = ColorMode.primary,
   }) {
-    switch (buttonType) {
-      case ButtonType.primary:
+    switch (circleButtonType) {
+      case CircleButtonType.primary:
         return PrimaryCircleButton(
           onPressed: () {},
           colorMode: colorMode,
@@ -74,7 +76,7 @@ abstract class ActionsUtils {
           ),
         );
 
-      default:
+      case CircleButtonType.secondary:
         return SecondaryCircleButton(
           colorMode: colorMode,
           onPressed: () {},
@@ -85,14 +87,5 @@ abstract class ActionsUtils {
           ),
         );
     }
-  }
-
-  static PhosphorIcon? showBasketballIcon({show = true}) {
-    if (show) {
-      return PhosphorIcon(
-        PhosphorIcons.basketball(),
-      );
-    }
-    return null;
   }
 }
