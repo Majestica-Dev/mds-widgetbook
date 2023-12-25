@@ -19,6 +19,8 @@ dependencies:
       ref: main
   flutter_lints: ^3.0.1
   equatable: ^2.0.5
+  number_text_input_formatter: ^1.0.0+7
+  flutter_hooks: ^0.20.3
 
 dev_dependencies:
   flutter_test:

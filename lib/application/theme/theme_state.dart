@@ -12,14 +12,6 @@ class ThemeState with EquatableMixin {
     required this.spacing,
   });
 
-  MDSThemeData get theme {
-    return MDSThemeData(
-      colors: colors,
-      textTheme: textTheme,
-      spacing: spacing,
-    );
-  }
-
   ThemeState copyWith({
     MDSColors? colors,
     MDSTextThemeData? textTheme,
