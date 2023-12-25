@@ -6,17 +6,17 @@ import 'package:number_text_input_formatter/number_text_input_formatter.dart';
 import 'package:mds_widget_book/core/extensions/color_extension.dart';
 
 class ColorSchemeCustomizableItem extends StatelessWidget {
-  final Function(String)? onChanged;
+  final ValueChanged<String> onChanged;
   final double opacity;
-  final String mainTocken;
-  final String childTocken;
+  final String mainToken;
+  final String childToken;
   final Color color;
 
   const ColorSchemeCustomizableItem({
     required this.onChanged,
     required this.color,
-    required this.mainTocken,
-    required this.childTocken,
+    required this.mainToken,
+    required this.childToken,
     required this.opacity,
     super.key,
   });
@@ -29,7 +29,7 @@ class ColorSchemeCustomizableItem extends StatelessWidget {
         SizedBox(
           width: 180,
           child: Text(
-            mainTocken,
+            mainToken,
             style: textTheme.bodyMRegular,
           ),
         ),
@@ -39,7 +39,7 @@ class ColorSchemeCustomizableItem extends StatelessWidget {
           child: Row(
             children: [
               Text(
-                '$childTocken-',
+                '$childToken-',
                 style: context.mdsTheme.textTheme.bodyMRegular,
               ),
               SizedBox(

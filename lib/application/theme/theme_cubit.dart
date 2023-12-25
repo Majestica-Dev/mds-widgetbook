@@ -1,15 +1,14 @@
-import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:majestica_ds/majestica_ds.dart';
+import 'package:mds_widget_book/core/extensions/mds_theme_data_extension.dart';
 
-part 'theme_state.dart';
-
-class ThemeCubit extends Cubit<ThemeState> {
+class ThemeCubit extends Cubit<MDSThemeData> {
   ThemeCubit()
       : super(
-          ThemeState(
+          MDSThemeData(
             colors: MDSColors.light(
               background: const Color(0xffF8F8F8),
               surface: const Color(0xffFFFFFF),

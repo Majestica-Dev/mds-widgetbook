@@ -160,13 +160,13 @@ class CustomizableColorScheme extends StatelessWidget {
             const SizedBox(height: 15),
             ColorSchemeItem(
               color: background,
-              mainTocken: 'background',
-              childTocken: 'backgorund',
+              mainToken: 'background',
+              childToken: 'backgorund',
             ),
             ColorSchemeItem(
               color: surface,
-              mainTocken: 'surface',
-              childTocken: 'surface',
+              mainToken: 'surface',
+              childToken: 'surface',
             ),
             const SizedBox(height: 30),
 
@@ -181,8 +181,8 @@ class CustomizableColorScheme extends StatelessWidget {
               },
               opacity: primaryHighContainerOpacity,
               color: primaryHighContainer,
-              mainTocken: 'primary-high-container',
-              childTocken: 'primary',
+              mainToken: 'primary-high-container',
+              childToken: 'primary',
             ),
             ColorSchemeCustomizableItem(
               onChanged: (value) {
@@ -194,8 +194,8 @@ class CustomizableColorScheme extends StatelessWidget {
               },
               opacity: primaryMedContainerOpacity,
               color: primaryMedContainer,
-              mainTocken: 'primary-med-container',
-              childTocken: 'primary',
+              mainToken: 'primary-med-container',
+              childToken: 'primary',
             ),
             ColorSchemeCustomizableItem(
               onChanged: (value) {
@@ -207,8 +207,8 @@ class CustomizableColorScheme extends StatelessWidget {
               },
               opacity: primaryLowContainerOpacity,
               color: primaryLowContainer,
-              mainTocken: 'primary-low-container',
-              childTocken: 'primary',
+              mainToken: 'primary-low-container',
+              childToken: 'primary',
             ),
 
             const SizedBox(height: 30),
@@ -223,8 +223,8 @@ class CustomizableColorScheme extends StatelessWidget {
               },
               opacity: neutralHighContainerOpacity,
               color: neutralHighContainer,
-              mainTocken: 'neutral-high-container',
-              childTocken: 'neutral',
+              mainToken: 'neutral-high-container',
+              childToken: 'neutral',
             ),
             ColorSchemeCustomizableItem(
               onChanged: (value) {
@@ -234,8 +234,8 @@ class CustomizableColorScheme extends StatelessWidget {
               },
               opacity: neutralMedContainerOpacity,
               color: neutralMedContainer,
-              mainTocken: 'neutral-med-container',
-              childTocken: 'neutal',
+              mainToken: 'neutral-med-container',
+              childToken: 'neutal',
             ),
             ColorSchemeCustomizableItem(
               onChanged: (value) {
@@ -247,8 +247,8 @@ class CustomizableColorScheme extends StatelessWidget {
               },
               opacity: neutralLowContainerOpacity,
               color: neutralLowContainer,
-              mainTocken: 'neutral-low-container',
-              childTocken: 'neutral',
+              mainToken: 'neutral-low-container',
+              childToken: 'neutral',
             ),
 
             //Neutral content
@@ -262,8 +262,8 @@ class CustomizableColorScheme extends StatelessWidget {
               },
               opacity: neutralHighContentOpacity,
               color: neutralHighContent,
-              mainTocken: 'neutral-high-content',
-              childTocken: 'neutral',
+              mainToken: 'neutral-high-content',
+              childToken: 'neutral',
             ),
             ColorSchemeCustomizableItem(
               onChanged: (value) {
@@ -275,8 +275,8 @@ class CustomizableColorScheme extends StatelessWidget {
               },
               opacity: neutralMedContentOpacity,
               color: neutralMedContent,
-              mainTocken: 'neutral-med-content',
-              childTocken: 'neutral',
+              mainToken: 'neutral-med-content',
+              childToken: 'neutral',
             ),
 
             ColorSchemeCustomizableItem(
@@ -289,14 +289,14 @@ class CustomizableColorScheme extends StatelessWidget {
               },
               opacity: neutralLowContainerOpacity,
               color: neutralLowContent,
-              mainTocken: 'neutral-low-content',
-              childTocken: 'neutral',
+              mainToken: 'neutral-low-content',
+              childToken: 'neutral',
             ),
 
             ColorSchemeItem(
               color: highContainerContent,
-              mainTocken: 'high-container-content',
-              childTocken: 'surface',
+              mainToken: 'high-container-content',
+              childToken: 'surface',
             ),
             const SizedBox(height: 30),
 
@@ -310,8 +310,8 @@ class CustomizableColorScheme extends StatelessWidget {
                 }
               },
               color: primaryHighContent,
-              mainTocken: 'primary-high-content',
-              childTocken: 'primary',
+              mainToken: 'primary-high-content',
+              childToken: 'primary',
             ),
 
             ColorSchemeCustomizableItem(
@@ -324,8 +324,8 @@ class CustomizableColorScheme extends StatelessWidget {
                 }
               },
               color: primaryMedContent,
-              mainTocken: 'primary-med-content',
-              childTocken: 'primary',
+              mainToken: 'primary-med-content',
+              childToken: 'primary',
             ),
 
             ColorSchemeCustomizableItem(
@@ -338,8 +338,8 @@ class CustomizableColorScheme extends StatelessWidget {
                 }
               },
               color: primaryLowContent,
-              mainTocken: 'primary-low-content',
-              childTocken: 'primary',
+              mainToken: 'primary-low-content',
+              childToken: 'primary',
             ),
           ],
         ),

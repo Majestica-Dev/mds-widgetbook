@@ -16,7 +16,7 @@ class MDSWidgetbook extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GlobalProviders(
-      child: BlocBuilder<ThemeCubit, ThemeState>(
+      child: BlocBuilder<ThemeCubit, MDSThemeData>(
         builder: (context, themeState) {
           return MDSTheme(
             data: MDSThemeData(
