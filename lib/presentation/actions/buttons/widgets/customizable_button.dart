@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:majestica_ds/majestica_ds.dart';
 import 'package:mds_widget_book/domain/actions/button_type.dart';
 import 'package:mds_widget_book/presentation/actions/core/utils/action_utils.dart';
+import 'package:mds_widget_book/presentation/actions/core/utils/constants.dart';
 
 import 'package:widgetbook/widgetbook.dart';
 
@@ -69,8 +70,8 @@ class CustomizableButton extends StatelessWidget {
         axis: axis,
         buttonSize: buttonSize,
         text: text,
-        leftIcon: ActionsUtils.showBasketballIcon(show: showLeftIcon),
-        rightIcon: ActionsUtils.showBasketballIcon(show: showRigtIcon),
+        leftIcon: showLeftIcon ? basketballIcon : null,
+        rightIcon: showRigtIcon ? basketballIcon : null,
         colorMode: colorMode,
       ),
     );

@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 
 import 'package:majestica_ds/majestica_ds.dart';
 
-import 'package:mds_widget_book/presentation/actions/core/utils/action_utils.dart';
+import 'package:mds_widget_book/presentation/actions/core/utils/constants.dart';
 import 'package:mds_widget_book/presentation/core/widgets/example_display.dart';
 import 'package:mds_widget_book/presentation/core/widgets/example_item.dart';
 
@@ -77,7 +77,7 @@ class ButtonsExample extends StatelessWidget {
               children: [
                 Expanded(
                   child: SecondaryButton(
-                    leftIcon: ActionsUtils.showBasketballIcon(),
+                    leftIcon: basketballIcon,
                     text: 'Button',
                     onPressed: () {},
                   ),
@@ -85,7 +85,7 @@ class ButtonsExample extends StatelessWidget {
                 const SizedBox(width: 12),
                 Expanded(
                   child: SecondaryButton(
-                    leftIcon: ActionsUtils.showBasketballIcon(),
+                    leftIcon: basketballIcon,
                     text: 'Button',
                     onPressed: () {},
                   ),
@@ -96,14 +96,14 @@ class ButtonsExample extends StatelessWidget {
               children: [
                 Expanded(
                   child: PrimaryButton(
-                    leftIcon: ActionsUtils.showBasketballIcon(),
+                    leftIcon: basketballIcon,
                     text: 'Button',
                     onPressed: () {},
                   ),
                 ),
                 const SizedBox(width: 12),
                 SecondaryButton(
-                  leftIcon: ActionsUtils.showBasketballIcon(),
+                  leftIcon: basketballIcon,
                   text: 'Button',
                   onPressed: () {},
                 )
@@ -112,21 +112,21 @@ class ButtonsExample extends StatelessWidget {
             ExampleItem(
               children: [
                 PrimaryButton(
-                  leftIcon: ActionsUtils.showBasketballIcon(),
+                  leftIcon: basketballIcon,
                   text: 'Button',
                   buttonSize: MDSButtonSize.S,
                   onPressed: () {},
                 ),
                 const SizedBox(width: 8),
                 SecondaryButton(
-                  leftIcon: ActionsUtils.showBasketballIcon(),
+                  leftIcon: basketballIcon,
                   text: 'Button',
                   buttonSize: MDSButtonSize.S,
                   onPressed: () {},
                 ),
                 const SizedBox(width: 8),
                 SecondaryButton(
-                  leftIcon: ActionsUtils.showBasketballIcon(),
+                  leftIcon: basketballIcon,
                   text: 'Button',
                   buttonSize: MDSButtonSize.S,
                   onPressed: () {},
