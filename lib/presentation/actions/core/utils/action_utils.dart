@@ -62,6 +62,7 @@ abstract class ActionsUtils {
 
   static Widget getCircleButtonByType({
     required ButtonType buttonType,
+    ColorMode colorMode = ColorMode.primary,
   }) {
     switch (buttonType) {
       case ButtonType.primary:
@@ -74,6 +75,7 @@ abstract class ActionsUtils {
 
       default:
         return SecondaryCircleButton(
+          colorMode: colorMode,
           onPressed: () {},
           child: PhosphorIcon(
             PhosphorIcons.power(
