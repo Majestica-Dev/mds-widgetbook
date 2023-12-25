@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+
 import 'package:majestica_ds/majestica_ds.dart';
-import 'package:mds_widget_book/presentation/theme/colors/core/utils/color_utils.dart';
+
+import 'package:mds_widget_book/core/extensions/color_extension.dart';
 
 class ColorSchemeItem extends StatelessWidget {
-  final String mainTocken;
-  final String childTocken;
+  final String mainToken;
+  final String childToken;
   final Color color;
 
   const ColorSchemeItem({
     required this.color,
-    required this.mainTocken,
-    required this.childTocken,
+    required this.mainToken,
+    required this.childToken,
     super.key,
   });
 
@@ -22,7 +24,7 @@ class ColorSchemeItem extends StatelessWidget {
         SizedBox(
           width: 180,
           child: Text(
-            mainTocken,
+            mainToken,
             style: textTheme.bodyMRegular,
           ),
         ),
@@ -30,7 +32,7 @@ class ColorSchemeItem extends StatelessWidget {
         SizedBox(
           width: 130,
           child: Text(
-            '$childTocken-100',
+            '$childToken-100',
             style: textTheme.bodyMRegular,
           ),
         ),
@@ -49,9 +51,7 @@ class ColorSchemeItem extends StatelessWidget {
               const SizedBox(
                 width: 12,
               ),
-              Text(
-                ColorUtil.colorToHex(color),
-              ),
+              Text(color.toHexString),
             ],
           ),
         )
