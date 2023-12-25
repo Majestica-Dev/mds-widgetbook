@@ -18,7 +18,7 @@ class ColorsDataState with EquatableMixin {
   final double neutralLowContentOpacity;
 
   final Color primary;
-  final Color nuetral;
+  final Color neutral;
 
   ColorsDataState({
     this.primaryHighContainerOpacity = 1,
@@ -34,7 +34,7 @@ class ColorsDataState with EquatableMixin {
     this.neutralMedContentOpacity = .44,
     this.neutralLowContentOpacity = .22,
     this.primary = const Color(0xff0766eb),
-    this.nuetral = const Color(0xff000000),
+    this.neutral = const Color(0xff000000),
   });
 
   ColorsDataState copyWith({
@@ -51,7 +51,7 @@ class ColorsDataState with EquatableMixin {
     final double? neutralMedContentOpacity,
     final double? neutralLowContentOpacity,
     final Color? primary,
-    final Color? nuetral,
+    final Color? neutral,
   }) {
     return ColorsDataState(
       primaryHighContainerOpacity:
@@ -79,7 +79,7 @@ class ColorsDataState with EquatableMixin {
       neutralLowContentOpacity:
           neutralLowContentOpacity ?? this.neutralLowContentOpacity,
       primary: primary ?? this.primary,
-      nuetral: nuetral ?? this.nuetral,
+      neutral: neutral ?? this.neutral,
     );
   }
 
@@ -97,5 +97,7 @@ class ColorsDataState with EquatableMixin {
         neutralHighContentOpacity,
         neutralMedContentOpacity,
         neutralLowContentOpacity,
+        primary,
+        neutral
       ];
 }

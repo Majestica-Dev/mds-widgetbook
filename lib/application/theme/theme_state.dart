@@ -1,6 +1,5 @@
 part of 'theme_cubit.dart';
 
-//TODO : default theme'
 class ThemeState with EquatableMixin {
   final MDSColors colors;
   final MDSTextThemeData textTheme;

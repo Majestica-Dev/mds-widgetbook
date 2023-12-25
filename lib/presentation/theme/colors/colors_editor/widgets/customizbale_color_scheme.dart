@@ -15,6 +15,8 @@ class CustomizableColorScheme extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorsData = context.watch<ColorsDataCubit>().state;
+    final colors = context.mdsTheme.colors;
+    final textTheme = context.mdsTheme.textTheme;
 
     final double primaryHighContainerOpacity =
         colorsData.primaryHighContainerOpacity;
@@ -40,9 +42,6 @@ class CustomizableColorScheme extends StatelessWidget {
     final double neutralMedContentOpacity = colorsData.neutralMedContentOpacity;
     final double neutralLowContentOpacity = colorsData.neutralLowContentOpacity;
 
-    final colors = context.mdsTheme.colors;
-    final textTheme = context.mdsTheme.textTheme;
-
     final Color background = context.knobs.color(
       label: 'Background',
       initialValue: colors.background,
@@ -55,10 +54,10 @@ class CustomizableColorScheme extends StatelessWidget {
       label: 'Primary',
       initialValue: colorsData.primary,
     );
-    print(colorsData.primary);
+
     final Color neutral = context.knobs.color(
       label: 'Neutral',
-      initialValue: colorsData.nuetral,
+      initialValue: colorsData.neutral,
     );
     final highContainerContent = context.knobs.color(
       label: 'High-container-content',
@@ -99,9 +98,12 @@ class CustomizableColorScheme extends StatelessWidget {
 
     //TODO : (Narek) equatble MDSColor
 
-    context
-        .watch<ColorsDataCubit>()
-        .setData(primary: primary, neutral: neutral);
+    context.read<ColorsDataCubit>().setData(
+          primary: primary,
+          neutral: neutral,
+        );
+    // print(colorsData.primary);
+
     context.read<ThemeCubit>().setColor(
           colors: MDSColors(
             background: background,
@@ -274,8 +276,8 @@ class CustomizableColorScheme extends StatelessWidget {
                       );
                 }
               },
-              opacity: neutralMedContainerOpacity,
-              color: neutralMedContainer,
+              opacity: neutralMedContentOpacity,
+              color: neutralMedContent,
               mainTocken: 'neutral-med-content',
               childTocken: 'neutral',
             ),
@@ -289,7 +291,7 @@ class CustomizableColorScheme extends StatelessWidget {
                 }
               },
               opacity: neutralLowContainerOpacity,
-              color: neutralLowContainer,
+              color: neutralLowContent,
               mainTocken: 'neutral-low-content',
               childTocken: 'neutral',
             ),

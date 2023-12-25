@@ -42,6 +42,9 @@ class ThemeCubit extends Cubit<ThemeState> {
   void setColor({
     required MDSColors colors,
   }) {
-    emit(state.copyWith(colors: colors)); //TODO :
+    final newState = state.copyWith(colors: colors);
+    if (newState != state) {
+      emit(state.copyWith(colors: colors));
+    }
   }
 }

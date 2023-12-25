@@ -24,23 +24,24 @@ class ColorsDataCubit extends Cubit<ColorsDataState> {
     final Color? primary,
     final Color? neutral,
   }) {
-    emit(
-      state.copyWith(
-        primaryHighContainerOpacity: primaryHighContainerOpacity,
-        primaryMedContainerOpacity: primaryMedContainerOpacity,
-        primaryLowContainerOpacity: primaryLowContainerOpacity,
-        primaryHighContentOpacity: primaryHighContentOpacity,
-        primaryLowContentOpacity: primaryLowContentOpacity,
-        primaryMedContentOpacity: primaryMedContentOpacity,
-        neutralHighContainerOpacity: neutralHighContainerOpacity,
-        neutralMedContainerOpacity: neutralMedContainerOpacity,
-        neutralLowContainerOpacity: neutralLowContainerOpacity,
-        neutralHighContentOpacity: neutralHighContentOpacity,
-        neutralMedContentOpacity: neutralMedContentOpacity,
-        neutralLowContentOpacity: neutralLowContentOpacity,
-        primary: primary,
-        nuetral: neutral,
-      ),
+    final newState = state.copyWith(
+      primaryHighContainerOpacity: primaryHighContainerOpacity,
+      primaryMedContainerOpacity: primaryMedContainerOpacity,
+      primaryLowContainerOpacity: primaryLowContainerOpacity,
+      primaryHighContentOpacity: primaryHighContentOpacity,
+      primaryLowContentOpacity: primaryLowContentOpacity,
+      primaryMedContentOpacity: primaryMedContentOpacity,
+      neutralHighContainerOpacity: neutralHighContainerOpacity,
+      neutralMedContainerOpacity: neutralMedContainerOpacity,
+      neutralLowContainerOpacity: neutralLowContainerOpacity,
+      neutralHighContentOpacity: neutralHighContentOpacity,
+      neutralMedContentOpacity: neutralMedContentOpacity,
+      neutralLowContentOpacity: neutralLowContentOpacity,
+      primary: primary,
+      neutral: neutral,
     );
+    if (state != newState) {
+      emit(newState);
+    }
   }
 }
