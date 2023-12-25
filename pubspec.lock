@@ -194,7 +194,7 @@ packages:
     source: hosted
     version: "1.1.0"
   equatable:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: equatable
       sha256: c2b87cb7756efdf69892005af546c56c0b5037f54d2a88269b4f347a505e3ca2
@@ -368,7 +368,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "1ff386cc65928656381f1d07e6a30dae8d084e60"
+      resolved-ref: a67a54559c0b153315cd23c4c8b84d916784de28
       url: "https://github.com/Majestica-Dev/design-system.git"
     source: git
     version: "1.0.1"
@@ -412,6 +412,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
+  number_text_input_formatter:
+    dependency: "direct main"
+    description:
+      name: number_text_input_formatter
+      sha256: "463af97be4a9c1d534b949e8e75c70b58033a67bb0f76d0ba6ad54f87edeb5e3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0+7"
   package_config:
     dependency: transitive
     description:
