@@ -55,6 +55,7 @@ class CustomizableColorScheme extends StatelessWidget {
       label: 'Primary',
       initialValue: colorsData.primary,
     );
+    print(colorsData.primary);
     final Color neutral = context.knobs.color(
       label: 'Neutral',
       initialValue: colorsData.nuetral,
@@ -98,7 +99,9 @@ class CustomizableColorScheme extends StatelessWidget {
 
     //TODO : (Narek) equatble MDSColor
 
-    context.read<ColorsDataCubit>().setData(primary: primary, neutral: neutral);
+    context
+        .watch<ColorsDataCubit>()
+        .setData(primary: primary, neutral: neutral);
     context.read<ThemeCubit>().setColor(
           colors: MDSColors(
             background: background,
