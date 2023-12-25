@@ -21,7 +21,7 @@ Widget widgetBookThemeChooser(BuildContext context) {
     ),
   );
 
-  final MDSColors colors = MDSColors(
+  final MDSColors colors = MDSColors.light(
     background: context.knobs.color(
       label: 'Background',
       initialValue: theme.colors.background,

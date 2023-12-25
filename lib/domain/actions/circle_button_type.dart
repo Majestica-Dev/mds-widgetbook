@@ -1,0 +1,4 @@
+enum CircleButtonType {
+  primary,
+  secondary,
+}
