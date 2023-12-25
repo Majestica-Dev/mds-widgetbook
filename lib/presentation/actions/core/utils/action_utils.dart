@@ -68,6 +68,7 @@ abstract class ActionsUtils {
       case ButtonType.primary:
         return PrimaryCircleButton(
           onPressed: () {},
+          colorMode: colorMode,
           child: PhosphorIcon(
             PhosphorIcons.power(PhosphorIconsStyle.bold),
           ),

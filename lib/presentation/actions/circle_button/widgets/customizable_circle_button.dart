@@ -21,7 +21,6 @@ class CustomizableCircleButton extends StatelessWidget {
     );
 
     final ColorMode colorMode = context.knobs.list(
-      description: 'support only secondary type',
       label: 'Color mode',
       options: [ColorMode.primary, ColorMode.neutral],
       labelBuilder: (value) => value.name,
