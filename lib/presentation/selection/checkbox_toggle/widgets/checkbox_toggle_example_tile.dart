@@ -14,11 +14,11 @@ class CheckboxAndToggleExample extends StatefulWidget {
 }
 
 class _CheckboxAndToggleExampleState extends State<CheckboxAndToggleExample> {
-  bool toggleOfStateValue = false;
-  bool toggleOnStateValue = true;
+  bool toggleValue1 = false;
+  bool toggleValue2 = true;
 
-  bool checkBoxUnCheckedValue = false;
-  bool chechkBoxCheckedValue = true;
+  bool checkBoxValue1 = false;
+  bool chechkBoxValue2 = true;
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +31,10 @@ class _CheckboxAndToggleExampleState extends State<CheckboxAndToggleExample> {
             children: [
               const Text('Toggle of'),
               MDSToggle(
-                value: toggleOfStateValue,
+                value: toggleValue1,
                 onChanged: (value) {
                   setState(() {
-                    toggleOfStateValue = value;
+                    toggleValue1 = value;
                   });
                 },
               ),
@@ -44,10 +44,10 @@ class _CheckboxAndToggleExampleState extends State<CheckboxAndToggleExample> {
             children: [
               const Text('Toggle on'),
               MDSToggle(
-                value: toggleOnStateValue,
+                value: toggleValue2,
                 onChanged: (value) {
                   setState(() {
-                    toggleOnStateValue = value;
+                    toggleValue2 = value;
                   });
                 },
               ),
@@ -83,10 +83,10 @@ class _CheckboxAndToggleExampleState extends State<CheckboxAndToggleExample> {
               MDSCheckBox(
                 onChanged: (value) {
                   setState(() {
-                    checkBoxUnCheckedValue = value;
+                    checkBoxValue1 = value;
                   });
                 },
-                value: checkBoxUnCheckedValue,
+                value: checkBoxValue1,
               ),
             ],
           ),
@@ -106,10 +106,10 @@ class _CheckboxAndToggleExampleState extends State<CheckboxAndToggleExample> {
             children: [
               const Text('CheckBox checked'),
               MDSCheckBox(
-                value: chechkBoxCheckedValue,
+                value: chechkBoxValue2,
                 onChanged: (value) {
                   setState(() {
-                    chechkBoxCheckedValue = value;
+                    chechkBoxValue2 = value;
                   });
                 },
               ),

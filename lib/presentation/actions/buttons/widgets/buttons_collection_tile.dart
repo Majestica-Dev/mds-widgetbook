@@ -4,6 +4,7 @@ import 'package:majestica_ds/majestica_ds.dart';
 
 import 'package:mds_widget_book/domain/actions/button_type.dart';
 import 'package:mds_widget_book/presentation/actions/core/utils/action_utils.dart';
+import 'package:mds_widget_book/presentation/actions/core/utils/constants.dart';
 
 class ButtonsCollectionTile extends StatelessWidget {
   final ButtonType buttonType;
@@ -32,8 +33,8 @@ class ButtonsCollectionTile extends StatelessWidget {
               colorMode: colorMode,
               buttonType: buttonType,
               text: 'Button',
-              leftIcon: ActionsUtils.getBasketballIconOrNull(),
-              rightIcon: ActionsUtils.getBasketballIconOrNull(),
+              leftIcon: basketballIcon,
+              rightIcon: basketballIcon,
             ),
           ),
       ],

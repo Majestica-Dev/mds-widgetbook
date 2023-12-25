@@ -1,10 +1,10 @@
 import 'package:flutter/widgets.dart';
+
 import 'package:majestica_ds/icons/icons.dart';
 import 'package:majestica_ds/majestica_ds.dart';
-import 'package:mds_widget_book/domain/actions/circle_button_type.dart';
-import 'package:mds_widget_book/presentation/actions/circle_button/widgets/circle_button_example.dart';
 
-import '../../../../domain/actions/button_type.dart';
+import 'package:mds_widget_book/domain/actions/button_type.dart';
+import 'package:mds_widget_book/domain/actions/circle_button_type.dart';
 
 abstract class ActionsUtils {
   static List<MDSButtonSize> getAbleButtonSizes({
@@ -87,12 +87,5 @@ abstract class ActionsUtils {
     }
   }
 
-  static PhosphorIcon? getBasketballIconOrNull({show = true}) {
-    if (show) {
-      return PhosphorIcon(
-        PhosphorIcons.basketball(),
-      );
-    }
-    return null;
-  }
+  
 }
