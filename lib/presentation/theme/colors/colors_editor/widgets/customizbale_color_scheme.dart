@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:majestica_ds/majestica_ds.dart';
-import 'package:mds_widget_book/application/theme/colors/colors_opacities_cubit.dart';
+import 'package:mds_widget_book/application/theme/colors/colors_form_cubit.dart';
 import 'package:mds_widget_book/application/theme/theme_cubit.dart';
 import 'package:mds_widget_book/presentation/core/widgets/example_display.dart';
 import 'package:mds_widget_book/presentation/theme/colors/core/widgets/color_scheme_item.dart';
@@ -14,31 +14,31 @@ class CustomizableColorScheme extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final opacities = context.watch<ColorsOpacitiesCubit>().state;
+    final colorsData = context.watch<ColorsDataCubit>().state;
 
     final double primaryHighContainerOpacity =
-        opacities.primaryHighContainerOpacity;
+        colorsData.primaryHighContainerOpacity;
     final double primaryMedContainerOpacity =
-        opacities.primaryMedContainerOpacity;
+        colorsData.primaryMedContainerOpacity;
     final double primaryLowContainerOpacity =
-        opacities.primaryLowContainerOpacity;
+        colorsData.primaryLowContainerOpacity;
 
     final double primaryHighContentOpacity =
-        opacities.primaryHighContentOpacity;
-    final double primaryLowContentOpacity = opacities.primaryLowContentOpacity;
-    final double primaryMedContentOpacity = opacities.primaryMedContentOpacity;
+        colorsData.primaryHighContentOpacity;
+    final double primaryLowContentOpacity = colorsData.primaryLowContentOpacity;
+    final double primaryMedContentOpacity = colorsData.primaryMedContentOpacity;
 
     final double neutralHighContainerOpacity =
-        opacities.neutralHighContainerOpacity;
+        colorsData.neutralHighContainerOpacity;
     final double neutralMedContainerOpacity =
-        opacities.neutralMedContainerOpacity;
+        colorsData.neutralMedContainerOpacity;
     final double neutralLowContainerOpacity =
-        opacities.neutralLowContainerOpacity;
+        colorsData.neutralLowContainerOpacity;
 
     final double neutralHighContentOpacity =
-        opacities.neutralHighContentOpacity;
-    final double neutralMedContentOpacity = opacities.neutralMedContentOpacity;
-    final double neutralLowContentOpacity = opacities.neutralLowContentOpacity;
+        colorsData.neutralHighContentOpacity;
+    final double neutralMedContentOpacity = colorsData.neutralMedContentOpacity;
+    final double neutralLowContentOpacity = colorsData.neutralLowContentOpacity;
 
     final colors = context.mdsTheme.colors;
     final textTheme = context.mdsTheme.textTheme;
@@ -53,11 +53,11 @@ class CustomizableColorScheme extends StatelessWidget {
     );
     final Color primary = context.knobs.color(
       label: 'Primary',
-      initialValue: colors.primaryHighContainer,
+      initialValue: colorsData.primary,
     );
     final Color neutral = context.knobs.color(
       label: 'Neutral',
-      initialValue: colors.neutralHighContent,
+      initialValue: colorsData.nuetral,
     );
     final highContainerContent = context.knobs.color(
       label: 'High-container-content',
@@ -97,6 +97,8 @@ class CustomizableColorScheme extends StatelessWidget {
         neutral.withOpacity(neutralLowContentOpacity);
 
     //TODO : (Narek) equatble MDSColor
+
+    context.read<ColorsDataCubit>().setData(primary: primary, neutral: neutral);
     context.read<ThemeCubit>().setColor(
           colors: MDSColors(
             background: background,
@@ -170,7 +172,7 @@ class CustomizableColorScheme extends StatelessWidget {
             ColorSchemeCustomizableItem(
               onChanged: (value) {
                 if (value.isNotEmpty) {
-                  context.read<ColorsOpacitiesCubit>().setColorsOpacities(
+                  context.read<ColorsDataCubit>().setData(
                         primaryHighContainerOpacity: double.parse(value) / 100,
                       );
                 }
@@ -183,7 +185,7 @@ class CustomizableColorScheme extends StatelessWidget {
             ColorSchemeCustomizableItem(
               onChanged: (value) {
                 if (value.isNotEmpty) {
-                  context.read<ColorsOpacitiesCubit>().setColorsOpacities(
+                  context.read<ColorsDataCubit>().setData(
                         primaryMedContainerOpacity: double.parse(value) / 100,
                       );
                 }
@@ -196,7 +198,7 @@ class CustomizableColorScheme extends StatelessWidget {
             ColorSchemeCustomizableItem(
               onChanged: (value) {
                 if (value.isNotEmpty) {
-                  context.read<ColorsOpacitiesCubit>().setColorsOpacities(
+                  context.read<ColorsDataCubit>().setData(
                         primaryLowContainerOpacity: double.parse(value) / 100,
                       );
                 }
@@ -212,7 +214,7 @@ class CustomizableColorScheme extends StatelessWidget {
             ColorSchemeCustomizableItem(
               onChanged: (value) {
                 if (value.isNotEmpty) {
-                  context.read<ColorsOpacitiesCubit>().setColorsOpacities(
+                  context.read<ColorsDataCubit>().setData(
                         neutralHighContainerOpacity: double.parse(value) / 100,
                       );
                 }
@@ -224,7 +226,7 @@ class CustomizableColorScheme extends StatelessWidget {
             ),
             ColorSchemeCustomizableItem(
               onChanged: (value) {
-                context.read<ColorsOpacitiesCubit>().setColorsOpacities(
+                context.read<ColorsDataCubit>().setData(
                       neutralMedContainerOpacity: double.parse(value) / 100,
                     );
               },
@@ -236,7 +238,7 @@ class CustomizableColorScheme extends StatelessWidget {
             ColorSchemeCustomizableItem(
               onChanged: (value) {
                 if (value.isNotEmpty) {
-                  context.read<ColorsOpacitiesCubit>().setColorsOpacities(
+                  context.read<ColorsDataCubit>().setData(
                         neutralLowContainerOpacity: double.parse(value) / 100,
                       );
                 }
@@ -252,7 +254,7 @@ class CustomizableColorScheme extends StatelessWidget {
 
             ColorSchemeCustomizableItem(
               onChanged: (value) {
-                context.read<ColorsOpacitiesCubit>().setColorsOpacities(
+                context.read<ColorsDataCubit>().setData(
                       neutralHighContentOpacity: double.parse(value) / 100,
                     );
               },
@@ -264,7 +266,7 @@ class CustomizableColorScheme extends StatelessWidget {
             ColorSchemeCustomizableItem(
               onChanged: (value) {
                 if (value.isNotEmpty) {
-                  context.read<ColorsOpacitiesCubit>().setColorsOpacities(
+                  context.read<ColorsDataCubit>().setData(
                         neutralMedContentOpacity: double.parse(value) / 100,
                       );
                 }
@@ -278,7 +280,7 @@ class CustomizableColorScheme extends StatelessWidget {
             ColorSchemeCustomizableItem(
               onChanged: (value) {
                 if (value.isNotEmpty) {
-                  context.read<ColorsOpacitiesCubit>().setColorsOpacities(
+                  context.read<ColorsDataCubit>().setData(
                         neutralLowContentOpacity: double.parse(value) / 100,
                       );
                 }
@@ -300,7 +302,7 @@ class CustomizableColorScheme extends StatelessWidget {
               opacity: primaryHighContentOpacity,
               onChanged: (value) {
                 if (value.isNotEmpty) {
-                  context.read<ColorsOpacitiesCubit>().setColorsOpacities(
+                  context.read<ColorsDataCubit>().setData(
                         primaryHighContentOpacity: double.parse(value) / 100,
                       );
                 }
@@ -314,7 +316,7 @@ class CustomizableColorScheme extends StatelessWidget {
               opacity: primaryMedContentOpacity,
               onChanged: (value) {
                 if (value.isNotEmpty) {
-                  context.read<ColorsOpacitiesCubit>().setColorsOpacities(
+                  context.read<ColorsDataCubit>().setData(
                         primaryMedContentOpacity: double.parse(value) / 100,
                       );
                 }
@@ -328,7 +330,7 @@ class CustomizableColorScheme extends StatelessWidget {
               opacity: primaryLowContentOpacity,
               onChanged: (value) {
                 if (value.isNotEmpty) {
-                  context.read<ColorsOpacitiesCubit>().setColorsOpacities(
+                  context.read<ColorsDataCubit>().setData(
                         primaryLowContentOpacity: double.parse(value) / 100,
                       );
                 }

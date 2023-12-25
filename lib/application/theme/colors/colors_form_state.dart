@@ -1,6 +1,6 @@
-part of 'colors_opacities_cubit.dart';
+part of 'colors_form_cubit.dart';
 
-class ColorsOpacitiesState with EquatableMixin {
+class ColorsDataState with EquatableMixin {
   final double primaryHighContainerOpacity;
   final double primaryMedContainerOpacity;
   final double primaryLowContainerOpacity;
@@ -17,7 +17,10 @@ class ColorsOpacitiesState with EquatableMixin {
   final double neutralMedContentOpacity;
   final double neutralLowContentOpacity;
 
-  ColorsOpacitiesState({
+  final Color primary;
+  final Color nuetral;
+
+  ColorsDataState({
     this.primaryHighContainerOpacity = 1,
     this.primaryMedContainerOpacity = .12,
     this.primaryLowContainerOpacity = .04,
@@ -30,9 +33,11 @@ class ColorsOpacitiesState with EquatableMixin {
     this.neutralHighContentOpacity = 1,
     this.neutralMedContentOpacity = .44,
     this.neutralLowContentOpacity = .22,
+    this.primary = const Color(0xff0766eb),
+    this.nuetral = const Color(0xff000000),
   });
 
-  ColorsOpacitiesState copyWith({
+  ColorsDataState copyWith({
     final double? primaryHighContainerOpacity,
     final double? primaryMedContainerOpacity,
     final double? primaryLowContainerOpacity,
@@ -45,8 +50,10 @@ class ColorsOpacitiesState with EquatableMixin {
     final double? neutralHighContentOpacity,
     final double? neutralMedContentOpacity,
     final double? neutralLowContentOpacity,
+    final Color? primary,
+    final Color? nuetral,
   }) {
-    return ColorsOpacitiesState(
+    return ColorsDataState(
       primaryHighContainerOpacity:
           primaryHighContainerOpacity ?? this.primaryHighContainerOpacity,
       primaryMedContainerOpacity:
@@ -71,6 +78,8 @@ class ColorsOpacitiesState with EquatableMixin {
           neutralMedContentOpacity ?? this.neutralMedContentOpacity,
       neutralLowContentOpacity:
           neutralLowContentOpacity ?? this.neutralLowContentOpacity,
+      primary: primary ?? this.primary,
+      nuetral: nuetral ?? this.nuetral,
     );
   }
 

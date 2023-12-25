@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mds_widget_book/application/theme/colors/colors_opacities_cubit.dart';
+import 'package:mds_widget_book/application/theme/colors/colors_form_cubit.dart';
 
 import 'package:mds_widget_book/application/theme/theme_cubit.dart';
 
@@ -21,7 +21,7 @@ class GlobalProviders extends StatelessWidget {
           create: (context) => ThemeCubit(),
         ),
         BlocProvider(
-          create: (context) => ColorsOpacitiesCubit(),
+          create: (context) => ColorsDataCubit(),
         ),
       ],
       child: child,
