@@ -35,7 +35,7 @@ class ThemeCubit extends Cubit<ThemeState> {
               titleLargeRegular: MDSTypography.titleLargeRegular,
               titleLargeBold: MDSTypography.titleLargeBold,
             ),
-            spacing: const MDSSpacing(), //TODO: default theme
+            spacing: const MDSSpacing(),
           ),
         );
 

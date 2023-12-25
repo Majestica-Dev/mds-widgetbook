@@ -96,13 +96,10 @@ class CustomizableColorScheme extends StatelessWidget {
     final Color neutralLowContent =
         neutral.withOpacity(neutralLowContentOpacity);
 
-    //TODO : (Narek) equatble MDSColor
-
     context.read<ColorsDataCubit>().setData(
           primary: primary,
           neutral: neutral,
         );
-    // print(colorsData.primary);
 
     context.read<ThemeCubit>().setColor(
           colors: MDSColors(
