@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'package:majestica_ds/majestica_ds.dart';
-import 'package:mds_widget_book/presentation/theme/colors/core/utils/color_utils.dart';
+
+import 'package:mds_widget_book/core/extensions/color_extension.dart';
 
 class ColorSchemeItem extends StatelessWidget {
   final String mainTocken;
@@ -49,9 +51,7 @@ class ColorSchemeItem extends StatelessWidget {
               const SizedBox(
                 width: 12,
               ),
-              Text(
-                ColorUtil.colorToHex(color),
-              ),
+              Text(color.toHexString),
             ],
           ),
         )

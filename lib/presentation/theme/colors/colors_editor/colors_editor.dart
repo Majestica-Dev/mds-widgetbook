@@ -10,5 +10,5 @@ import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
   type: MDSTheme,
 )
 Widget colors(BuildContext context) {
-  return const Center(child: CustomizableColorScheme()); //TODO
+  return const Center(child: CustomizableColorScheme());
 }

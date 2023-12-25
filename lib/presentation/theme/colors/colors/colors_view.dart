@@ -10,5 +10,5 @@ import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
   type: MDSTheme,
 )
 Widget colorsReview(BuildContext context) {
-  return const CustomizableColorScheme(); //TODO
+  return const CustomizableColorScheme(); //TODO impelemnt colors view
 }
