@@ -46,4 +46,13 @@ class ThemeCubit extends Cubit<MDSThemeData> {
       emit(state.copyWith(colors: colors));
     }
   }
+
+  void setSpace({required MDSSpacing spacing}) {
+    final newState = state.copyWith(spacing: spacing);
+    if (newState != state) {
+      emit(
+        state.copyWith(spacing: spacing),
+      );
+    }
+  }
 }
