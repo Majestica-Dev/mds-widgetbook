@@ -14,8 +14,8 @@ class CheckboxAndToggleExample extends StatefulWidget {
 }
 
 class _CheckboxAndToggleExampleState extends State<CheckboxAndToggleExample> {
-  bool toggleOfValue = false;
-  bool toggleOnValue = true;
+  bool toggleOfStateValue = false;
+  bool toggleOnStateValue = true;
 
   bool checkBoxUnCheckedValue = false;
   bool chechkBoxCheckedValue = true;
@@ -31,10 +31,10 @@ class _CheckboxAndToggleExampleState extends State<CheckboxAndToggleExample> {
             children: [
               const Text('Toggle of'),
               MDSToggle(
-                value: toggleOfValue,
+                value: toggleOfStateValue,
                 onChanged: (value) {
                   setState(() {
-                    toggleOfValue = value;
+                    toggleOfStateValue = value;
                   });
                 },
               ),
@@ -44,10 +44,10 @@ class _CheckboxAndToggleExampleState extends State<CheckboxAndToggleExample> {
             children: [
               const Text('Toggle on'),
               MDSToggle(
-                value: toggleOnValue,
+                value: toggleOnStateValue,
                 onChanged: (value) {
                   setState(() {
-                    toggleOnValue = value;
+                    toggleOnStateValue = value;
                   });
                 },
               ),

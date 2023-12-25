@@ -69,8 +69,8 @@ class CustomizableButton extends StatelessWidget {
         axis: axis,
         buttonSize: buttonSize,
         text: text,
-        leftIcon: ActionsUtils.showBasketballIcon(show: showLeftIcon),
-        rightIcon: ActionsUtils.showBasketballIcon(show: showRigtIcon),
+        leftIcon: ActionsUtils.getBasketballIconOrNull(show: showLeftIcon),
+        rightIcon: ActionsUtils.getBasketballIconOrNull(show: showRigtIcon),
         colorMode: colorMode,
       ),
     );

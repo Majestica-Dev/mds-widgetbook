@@ -77,7 +77,7 @@ class ButtonsExample extends StatelessWidget {
               children: [
                 Expanded(
                   child: SecondaryButton(
-                    leftIcon: ActionsUtils.showBasketballIcon(),
+                    leftIcon: ActionsUtils.getBasketballIconOrNull(),
                     text: 'Button',
                     onPressed: () {},
                   ),
@@ -85,7 +85,7 @@ class ButtonsExample extends StatelessWidget {
                 const SizedBox(width: 12),
                 Expanded(
                   child: SecondaryButton(
-                    leftIcon: ActionsUtils.showBasketballIcon(),
+                    leftIcon: ActionsUtils.getBasketballIconOrNull(),
                     text: 'Button',
                     onPressed: () {},
                   ),
@@ -96,14 +96,14 @@ class ButtonsExample extends StatelessWidget {
               children: [
                 Expanded(
                   child: PrimaryButton(
-                    leftIcon: ActionsUtils.showBasketballIcon(),
+                    leftIcon: ActionsUtils.getBasketballIconOrNull(),
                     text: 'Button',
                     onPressed: () {},
                   ),
                 ),
                 const SizedBox(width: 12),
                 SecondaryButton(
-                  leftIcon: ActionsUtils.showBasketballIcon(),
+                  leftIcon: ActionsUtils.getBasketballIconOrNull(),
                   text: 'Button',
                   onPressed: () {},
                 )
@@ -112,21 +112,21 @@ class ButtonsExample extends StatelessWidget {
             ExampleItem(
               children: [
                 PrimaryButton(
-                  leftIcon: ActionsUtils.showBasketballIcon(),
+                  leftIcon: ActionsUtils.getBasketballIconOrNull(),
                   text: 'Button',
                   buttonSize: MDSButtonSize.S,
                   onPressed: () {},
                 ),
                 const SizedBox(width: 8),
                 SecondaryButton(
-                  leftIcon: ActionsUtils.showBasketballIcon(),
+                  leftIcon: ActionsUtils.getBasketballIconOrNull(),
                   text: 'Button',
                   buttonSize: MDSButtonSize.S,
                   onPressed: () {},
                 ),
                 const SizedBox(width: 8),
                 SecondaryButton(
-                  leftIcon: ActionsUtils.showBasketballIcon(),
+                  leftIcon: ActionsUtils.getBasketballIconOrNull(),
                   text: 'Button',
                   buttonSize: MDSButtonSize.S,
                   onPressed: () {},
