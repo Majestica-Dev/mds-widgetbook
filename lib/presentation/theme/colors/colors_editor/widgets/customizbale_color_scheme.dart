@@ -15,6 +15,7 @@ class CustomizableColorScheme extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final opacities = context.watch<ColorsOpacitiesCubit>().state;
+
     final double primaryHighContainerOpacity =
         opacities.primaryHighContainerOpacity;
     final double primaryMedContainerOpacity =
