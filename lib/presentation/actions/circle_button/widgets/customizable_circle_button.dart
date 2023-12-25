@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:majestica_ds/majestica_ds.dart';
 
 import 'package:widgetbook/widgetbook.dart';
 
@@ -18,6 +19,16 @@ class CustomizableCircleButton extends StatelessWidget {
       ],
       labelBuilder: (value) => value.name,
     );
-    return ActionsUtils.getCircleButtonByType(buttonType: buttonType);
+
+    final ColorMode colorMode = context.knobs.list(
+      label: 'Color mode',
+      options: [ColorMode.primary, ColorMode.neutral],
+      labelBuilder: (value) => value.name,
+    );
+
+    return ActionsUtils.getCircleButtonByType(
+      buttonType: buttonType,
+      colorMode: colorMode,
+    );
   }
 }

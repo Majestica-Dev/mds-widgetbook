@@ -1,8 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:majestica_ds/icons/icons.dart';
 import 'package:majestica_ds/majestica_ds.dart';
-
-import '../../../../domain/actions/button_type.dart';
+import 'package:mds_widget_book/domain/actions/button_type.dart';
 
 abstract class ActionsUtils {
   static List<MDSButtonSize> getAbleButtonSizes({
@@ -63,11 +62,13 @@ abstract class ActionsUtils {
 
   static Widget getCircleButtonByType({
     required ButtonType buttonType,
+    ColorMode colorMode = ColorMode.primary,
   }) {
     switch (buttonType) {
       case ButtonType.primary:
         return PrimaryCircleButton(
           onPressed: () {},
+          colorMode: colorMode,
           child: PhosphorIcon(
             PhosphorIcons.power(PhosphorIconsStyle.bold),
           ),
@@ -75,6 +76,7 @@ abstract class ActionsUtils {
 
       default:
         return SecondaryCircleButton(
+          colorMode: colorMode,
           onPressed: () {},
           child: PhosphorIcon(
             PhosphorIcons.power(
