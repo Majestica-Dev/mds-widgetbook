@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:majestica_ds/majestica_ds.dart';
+import 'package:widgetbook/widgetbook.dart';
+
 import 'package:mds_widget_book/application/theme/colors/colors_form_cubit.dart';
 import 'package:mds_widget_book/application/theme/theme_cubit.dart';
 import 'package:mds_widget_book/presentation/core/widgets/example_display.dart';
-import 'package:mds_widget_book/presentation/theme/colors/core/widgets/color_scheme_item.dart';
-import 'package:mds_widget_book/presentation/theme/colors/colors_editor/widgets/color_scheme_customizable_item.dart';
+import 'package:mds_widget_book/presentation/theme/colors/widgets/customizable/customizable_color_scheme_item.dart';
 
-import 'package:widgetbook/widgetbook.dart';
-
-class CustomizableColorScheme extends StatelessWidget {
-  const CustomizableColorScheme({super.key});
+class CustomizableColorsScheme extends StatelessWidget {
+  const CustomizableColorsScheme({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -158,12 +158,14 @@ class CustomizableColorScheme extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 15),
-            ColorSchemeItem(
+            CustomizableColorSchemeItem(
+              opacity: 1,
               color: background,
               mainToken: 'background',
               childToken: 'backgorund',
             ),
-            ColorSchemeItem(
+            CustomizableColorSchemeItem(
+              opacity: 1,
               color: surface,
               mainToken: 'surface',
               childToken: 'surface',
@@ -171,7 +173,7 @@ class CustomizableColorScheme extends StatelessWidget {
             const SizedBox(height: 30),
 
             //Primary  container
-            ColorSchemeCustomizableItem(
+            CustomizableColorSchemeItem(
               onChanged: (value) {
                 if (value.isNotEmpty) {
                   context.read<ColorsDataCubit>().setData(
@@ -184,7 +186,7 @@ class CustomizableColorScheme extends StatelessWidget {
               mainToken: 'primary-high-container',
               childToken: 'primary',
             ),
-            ColorSchemeCustomizableItem(
+            CustomizableColorSchemeItem(
               onChanged: (value) {
                 if (value.isNotEmpty) {
                   context.read<ColorsDataCubit>().setData(
@@ -197,7 +199,7 @@ class CustomizableColorScheme extends StatelessWidget {
               mainToken: 'primary-med-container',
               childToken: 'primary',
             ),
-            ColorSchemeCustomizableItem(
+            CustomizableColorSchemeItem(
               onChanged: (value) {
                 if (value.isNotEmpty) {
                   context.read<ColorsDataCubit>().setData(
@@ -213,7 +215,7 @@ class CustomizableColorScheme extends StatelessWidget {
 
             const SizedBox(height: 30),
             //Neutral container
-            ColorSchemeCustomizableItem(
+            CustomizableColorSchemeItem(
               onChanged: (value) {
                 if (value.isNotEmpty) {
                   context.read<ColorsDataCubit>().setData(
@@ -226,7 +228,7 @@ class CustomizableColorScheme extends StatelessWidget {
               mainToken: 'neutral-high-container',
               childToken: 'neutral',
             ),
-            ColorSchemeCustomizableItem(
+            CustomizableColorSchemeItem(
               onChanged: (value) {
                 context.read<ColorsDataCubit>().setData(
                       neutralMedContainerOpacity: double.parse(value) / 100,
@@ -237,7 +239,7 @@ class CustomizableColorScheme extends StatelessWidget {
               mainToken: 'neutral-med-container',
               childToken: 'neutal',
             ),
-            ColorSchemeCustomizableItem(
+            CustomizableColorSchemeItem(
               onChanged: (value) {
                 if (value.isNotEmpty) {
                   context.read<ColorsDataCubit>().setData(
@@ -254,7 +256,7 @@ class CustomizableColorScheme extends StatelessWidget {
             //Neutral content
             const SizedBox(height: 30),
 
-            ColorSchemeCustomizableItem(
+            CustomizableColorSchemeItem(
               onChanged: (value) {
                 context.read<ColorsDataCubit>().setData(
                       neutralHighContentOpacity: double.parse(value) / 100,
@@ -265,7 +267,7 @@ class CustomizableColorScheme extends StatelessWidget {
               mainToken: 'neutral-high-content',
               childToken: 'neutral',
             ),
-            ColorSchemeCustomizableItem(
+            CustomizableColorSchemeItem(
               onChanged: (value) {
                 if (value.isNotEmpty) {
                   context.read<ColorsDataCubit>().setData(
@@ -279,7 +281,7 @@ class CustomizableColorScheme extends StatelessWidget {
               childToken: 'neutral',
             ),
 
-            ColorSchemeCustomizableItem(
+            CustomizableColorSchemeItem(
               onChanged: (value) {
                 if (value.isNotEmpty) {
                   context.read<ColorsDataCubit>().setData(
@@ -293,14 +295,15 @@ class CustomizableColorScheme extends StatelessWidget {
               childToken: 'neutral',
             ),
 
-            ColorSchemeItem(
+            CustomizableColorSchemeItem(
+              opacity: 1,
               color: highContainerContent,
               mainToken: 'high-container-content',
               childToken: 'surface',
             ),
             const SizedBox(height: 30),
 
-            ColorSchemeCustomizableItem(
+            CustomizableColorSchemeItem(
               opacity: primaryHighContentOpacity,
               onChanged: (value) {
                 if (value.isNotEmpty) {
@@ -314,7 +317,7 @@ class CustomizableColorScheme extends StatelessWidget {
               childToken: 'primary',
             ),
 
-            ColorSchemeCustomizableItem(
+            CustomizableColorSchemeItem(
               opacity: primaryMedContentOpacity,
               onChanged: (value) {
                 if (value.isNotEmpty) {
@@ -328,7 +331,7 @@ class CustomizableColorScheme extends StatelessWidget {
               childToken: 'primary',
             ),
 
-            ColorSchemeCustomizableItem(
+            CustomizableColorSchemeItem(
               opacity: primaryLowContentOpacity,
               onChanged: (value) {
                 if (value.isNotEmpty) {
