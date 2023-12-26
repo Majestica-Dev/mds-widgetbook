@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:majestica_ds/majestica_ds.dart';
+import 'package:mds_widget_book/application/action/buttons/buttons_data_cubit.dart';
 import 'package:mds_widget_book/domain/actions/button_type.dart';
 import 'package:mds_widget_book/presentation/actions/core/utils/action_utils.dart';
 import 'package:mds_widget_book/presentation/actions/core/utils/constants.dart';
@@ -13,7 +15,10 @@ class CustomizableButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final buttonData = context.read<ButtonsDataCubit>().state;
+
     final ButtonType buttonType = context.knobs.list(
+      initialOption: buttonData.buttonType,
       label: 'Type',
       options: [
         ButtonType.primary,
@@ -23,24 +28,25 @@ class CustomizableButton extends StatelessWidget {
       labelBuilder: (value) => value.name,
     );
     final bool disabled = context.knobs.boolean(
+      initialValue: buttonData.disabled,
       label: 'State',
       description: 'is disabled',
     );
     final String text = context.knobs.string(
       label: 'Text',
-      initialValue: 'Button',
+      initialValue: buttonData.text,
     );
     final bool showLeftIcon = context.knobs.boolean(
       label: 'Left icon',
-      initialValue: true,
+      initialValue: buttonData.showLeftIcon,
     );
     final bool showRigtIcon = context.knobs.boolean(
       label: 'Right icon',
-      initialValue: true,
+      initialValue: buttonData.showRigtIcon,
     );
 
     final MDSButtonSize buttonSize = context.knobs.list(
-      initialOption: MDSButtonSize.M,
+      initialOption: buttonData.buttonSize,
       label: 'Size',
       description: 'for text type is suported only L and M',
       options: ActionsUtils.getAbleButtonSizes(buttonType: buttonType),
@@ -48,6 +54,7 @@ class CustomizableButton extends StatelessWidget {
     );
 
     final ColorMode colorMode = context.knobs.list(
+      initialOption: buttonData.colorMode,
       label: 'Color Mode',
       description: 'supports only  Secondary type',
       options: [
@@ -58,10 +65,22 @@ class CustomizableButton extends StatelessWidget {
     );
 
     final Axis axis = context.knobs.list(
+      initialOption: buttonData.axis,
       label: 'Axis',
       options: [Axis.horizontal, Axis.vertical],
       labelBuilder: (value) => value.name,
     );
+
+    context.read<ButtonsDataCubit>().setData(
+          buttonType: buttonType,
+          disabled: disabled,
+          text: text,
+          showLeftIcon: showLeftIcon,
+          showRigtIcon: showRigtIcon,
+          buttonSize: buttonSize,
+          colorMode: colorMode,
+          axis: axis,
+        );
 
     return Center(
       child: ActionsUtils.getButtonByType(

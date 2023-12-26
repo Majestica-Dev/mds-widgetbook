@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:majestica_ds/majestica_ds.dart';
-import 'package:mds_widget_book/application/theme/colors/colors_form_cubit.dart';
+import 'package:mds_widget_book/application/theme/colors/colors_data_cubit.dart';
 import 'package:mds_widget_book/application/theme/theme_cubit.dart';
 import 'package:mds_widget_book/presentation/core/widgets/example_display.dart';
 import 'package:mds_widget_book/presentation/theme/colors/core/widgets/color_scheme_item.dart';
