@@ -20,34 +20,11 @@ class CustomizableTextField extends StatelessWidget {
       label: 'Hint Text',
       initialValue: textFieldData.hintText,
     );
-    final IconDataProperty? trailingIconData = context.knobs.listOrNull(
-      label: 'Trailing Icon',
-      options: [
-        null,
-        IconDataProperty(
-          'airplane',
-          PhosphorIcons.airplane(),
-        ),
-        IconDataProperty(
-          'alien',
-          PhosphorIcons.alien(),
-        ),
-      ],
-      labelBuilder: (value) {
-        if (value != null) {
-          return value.name!;
-        } else {
-          return '';
-        }
-      },
-      initialOption: null,
-    );
+    final bool showTrailingIcon = context.knobs.boolean(
+        label: 'Trailing Icon', initialValue: textFieldData.showTrailingIcon);
 
-    final trailingIcon = trailingIconData == null
-        ? null
-        : PhosphorIcon(
-            trailingIconData.value!,
-          );
+    final trailingIcon =
+        showTrailingIcon ? PhosphorIcon(PhosphorIcons.anchor()) : null;
 
     final String? errorMessage = context.knobs.stringOrNull(
       label: 'Error Message',
@@ -62,7 +39,7 @@ class CustomizableTextField extends StatelessWidget {
     context.read<TextFieldDataCubit>().setData(
           label: label,
           hintText: hintText,
-          trailingIconData: trailingIconData,
+          showTrailingIcon: showTrailingIcon,
           errorMessage: errorMessage,
           successMessage: successMessage,
         );
