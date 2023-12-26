@@ -5,11 +5,13 @@ class ExampleDisplay extends StatelessWidget {
   final Widget body;
   final double width;
   final double height;
+  final Color? backgroundColor;
 
   const ExampleDisplay({
     required this.body,
     this.width = 390,
     this.height = 844,
+    this.backgroundColor,
     super.key,
   });
 
@@ -20,7 +22,7 @@ class ExampleDisplay extends StatelessWidget {
       height: height,
       width: width,
       decoration: BoxDecoration(
-        color: colors.background,
+        color: backgroundColor ?? colors.background,
         border: Border.all(color: colors.neutralLowContent),
         borderRadius: BorderRadius.circular(25),
       ),
