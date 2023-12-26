@@ -5,11 +5,13 @@ import 'package:majestica_ds/majestica_ds.dart';
 class ExampleItem extends StatelessWidget {
   final List<Widget> children;
   final MainAxisAlignment mainAxisAlignment;
+  final EdgeInsetsGeometry padding;
   final Axis axis;
 
   const ExampleItem({
     required this.children,
     this.mainAxisAlignment = MainAxisAlignment.spaceBetween,
+    this.padding = const EdgeInsets.only(left: 16, right: 16, bottom: 12),
     this.axis = Axis.horizontal,
     super.key,
   });
@@ -18,7 +20,7 @@ class ExampleItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final colors = context.mdsTheme.colors;
     return Padding(
-      padding: const EdgeInsets.only(left: 16, right: 16, bottom: 12),
+      padding: padding,
       child: Container(
         width: 358,
         decoration: BoxDecoration(

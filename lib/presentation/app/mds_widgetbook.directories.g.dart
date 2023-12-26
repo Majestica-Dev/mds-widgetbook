@@ -26,6 +26,8 @@ import 'package:mds_widget_book/presentation/selection/checkbox_toggle/checkbox_
 import 'package:mds_widget_book/presentation/theme/colors/colors.dart' as _i9;
 import 'package:mds_widget_book/presentation/theme/spacing/spacing.dart'
     as _i10;
+import 'package:mds_widget_book/presentation/theme/typography/typography.dart'
+    as _i11;
 import 'package:widgetbook/widgetbook.dart' as _i1;
 
 final directories = <_i1.WidgetbookNode>[
@@ -105,7 +107,11 @@ final directories = <_i1.WidgetbookNode>[
           ),
           _i1.WidgetbookUseCase(
             name: 'Spacing',
-            builder: _i10.colorsReview,
+            builder: _i10.spacing,
+          ),
+          _i1.WidgetbookUseCase(
+            name: 'Typography',
+            builder: _i11.typography,
           ),
         ],
       )
