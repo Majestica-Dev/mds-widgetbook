@@ -111,25 +111,31 @@ class ButtonsExample extends StatelessWidget {
             ),
             ExampleItem(
               children: [
-                PrimaryButton(
-                  leftIcon: basketballIcon,
-                  text: 'Button',
-                  buttonSize: MDSButtonSize.S,
-                  onPressed: () {},
+                Expanded(
+                  child: PrimaryButton(
+                    leftIcon: basketballIcon,
+                    text: 'Button',
+                    buttonSize: MDSButtonSize.S,
+                    onPressed: () {},
+                  ),
                 ),
                 const SizedBox(width: 8),
-                SecondaryButton(
-                  leftIcon: basketballIcon,
-                  text: 'Button',
-                  buttonSize: MDSButtonSize.S,
-                  onPressed: () {},
+                Expanded(
+                  child: SecondaryButton(
+                    leftIcon: basketballIcon,
+                    text: 'Button',
+                    buttonSize: MDSButtonSize.S,
+                    onPressed: () {},
+                  ),
                 ),
                 const SizedBox(width: 8),
-                SecondaryButton(
-                  leftIcon: basketballIcon,
-                  text: 'Button',
-                  buttonSize: MDSButtonSize.S,
-                  onPressed: () {},
+                Expanded(
+                  child: SecondaryButton(
+                    leftIcon: basketballIcon,
+                    text: 'Button',
+                    buttonSize: MDSButtonSize.S,
+                    onPressed: () {},
+                  ),
                 ),
               ],
             ),
