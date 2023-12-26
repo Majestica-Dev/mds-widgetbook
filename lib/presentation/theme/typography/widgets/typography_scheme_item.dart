@@ -17,7 +17,7 @@ class TypographySchemeItem extends StatelessWidget {
       children: [
         Text(name),
         Text(
-          'example text',
+          'Example Text',
           style: textStyle,
         ),
       ],
