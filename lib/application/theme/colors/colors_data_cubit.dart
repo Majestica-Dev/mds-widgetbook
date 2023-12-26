@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-part 'colors_form_state.dart';
+part 'colors_data_state.dart';
 
 class ColorsDataCubit extends Cubit<ColorsDataState> {
   ColorsDataCubit() : super(ColorsDataState());

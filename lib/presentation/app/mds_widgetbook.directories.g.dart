@@ -23,12 +23,9 @@ import 'package:mds_widget_book/presentation/navigation/tab_bar/tab_bar.dart'
     as _i7;
 import 'package:mds_widget_book/presentation/selection/checkbox_toggle/checkbox_toggle.dart'
     as _i8;
-import 'package:mds_widget_book/presentation/theme/colors/colors/colors_view.dart'
-    as _i10;
-import 'package:mds_widget_book/presentation/theme/colors/colors_editor/colors_editor.dart'
-    as _i9;
+import 'package:mds_widget_book/presentation/theme/colors/colors.dart' as _i9;
 import 'package:mds_widget_book/presentation/theme/spacing/spacing.dart'
-    as _i11;
+    as _i10;
 import 'package:widgetbook/widgetbook.dart' as _i1;
 
 final directories = <_i1.WidgetbookNode>[
@@ -103,16 +100,12 @@ final directories = <_i1.WidgetbookNode>[
         name: 'MDSTheme',
         useCases: [
           _i1.WidgetbookUseCase(
-            name: 'Colors Editor',
+            name: 'Colors',
             builder: _i9.colors,
           ),
           _i1.WidgetbookUseCase(
-            name: 'Colors View',
-            builder: _i10.colorsReview,
-          ),
-          _i1.WidgetbookUseCase(
             name: 'Spacing',
-            builder: _i11.colorsReview,
+            builder: _i10.colorsReview,
           ),
         ],
       )
