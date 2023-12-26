@@ -29,9 +29,15 @@ class _TabBarExampleState extends State<TabBarExample> {
               MDSTabBar(
                 activeTabIndex: activeIndex1,
                 tabs: const [
-                  Text('Category'),
-                  Text('Category'),
-                  Text('Category')
+                  MDSTab(
+                    child: Text('Category'),
+                  ),
+                  MDSTab(
+                    child: Text('Category'),
+                  ),
+                  MDSTab(
+                    child: Text('Category'),
+                  ),
                 ],
                 onChanged: (value) {
                   setState(() {
@@ -43,8 +49,12 @@ class _TabBarExampleState extends State<TabBarExample> {
               MDSTabBar(
                 activeTabIndex: activeIndex2,
                 tabs: const [
-                  Text('Category'),
-                  Text('Category'),
+                  MDSTab(
+                    child: Text('Category'),
+                  ),
+                  MDSTab(
+                    child: Text('Category'),
+                  ),
                 ],
                 onChanged: (value) {
                   setState(() {
@@ -56,11 +66,21 @@ class _TabBarExampleState extends State<TabBarExample> {
               MDSTabBar(
                 activeTabIndex: activeIndex3,
                 tabs: const [
-                  Text('1'),
-                  Text('2'),
-                  Text('3'),
-                  Text('4'),
-                  Text('5'),
+                  MDSTab(
+                    child: Text('1'),
+                  ),
+                  MDSTab(
+                    child: Text('2'),
+                  ),
+                  MDSTab(
+                    child: Text('3'),
+                  ),
+                  MDSTab(
+                    child: Text('4'),
+                  ),
+                  MDSTab(
+                    child: Text('5'),
+                  ),
                 ],
                 onChanged: (value) {
                   setState(() {
