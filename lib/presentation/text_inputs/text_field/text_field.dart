@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mds_widget_book/presentation/text_inputs/text_field/widgets/customizable_text_field.dart';
 
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
@@ -10,7 +11,14 @@ import 'package:mds_widget_book/presentation/text_inputs/text_field/widgets/text
   type: TextField,
 )
 Widget textField(BuildContext context) {
-  return Center(
-    child: TextFieldExamples(),
+  return const Center(
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        TextFieldExamples(),
+        SizedBox(width: 30),
+        CustomizableTextField(),
+      ],
+    ),
   );
 }

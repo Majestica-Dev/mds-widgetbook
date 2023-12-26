@@ -12,13 +12,12 @@ class ColorsScheme extends StatelessWidget {
 
     return ExampleDisplay(
       width: 440,
-      height: 750,
+      height: null,
       backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: [
             const SizedBox(height: 15),
             ColorsSchemeItem(

@@ -26,7 +26,7 @@ Widget divider(BuildContext context) {
           ],
         ),
         SizedBox(width: 80),
-        CustomizableDivider()
+        CustomizableDivider(),
       ],
     ),
   );
