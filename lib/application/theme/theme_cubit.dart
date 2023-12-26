@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:majestica_ds/majestica_ds.dart';
-import 'package:mds_widget_book/presentation/extensions/mds_theme_data_extension.dart';
+import 'package:mds_widget_book/presentation/core/extensions/mds_theme_data_extension.dart';
 
 class ThemeCubit extends Cubit<MDSThemeData> {
   ThemeCubit()

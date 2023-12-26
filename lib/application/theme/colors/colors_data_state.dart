@@ -1,4 +1,4 @@
-part of 'colors_form_cubit.dart';
+part of 'colors_data_cubit.dart';
 
 class ColorsDataState with EquatableMixin {
   final double primaryHighContainerOpacity;

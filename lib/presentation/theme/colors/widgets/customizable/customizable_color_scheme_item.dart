@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:majestica_ds/majestica_ds.dart';
-import 'package:mds_widget_book/presentation/extensions/color_extension.dart';
+import 'package:mds_widget_book/presentation/core/extensions/color_extension.dart';
 import 'package:number_text_input_formatter/number_text_input_formatter.dart';
 
 class CustomizableColorSchemeItem extends StatelessWidget {
