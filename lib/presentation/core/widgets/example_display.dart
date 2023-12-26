@@ -4,7 +4,7 @@ import 'package:majestica_ds/majestica_ds.dart';
 class ExampleDisplay extends StatelessWidget {
   final Widget body;
   final double width;
-  final double height;
+  final double? height;
 
   const ExampleDisplay({
     required this.body,
