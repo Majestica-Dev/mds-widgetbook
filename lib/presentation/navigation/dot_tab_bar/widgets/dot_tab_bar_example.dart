@@ -26,14 +26,24 @@ class _DotTabBarExampleState extends State<DotTabBarExample> {
           }
         });
       },
-      child: const ExampleDisplay(
+      child: ExampleDisplay(
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
           child: Column(
             children: [
               MDSDotTabBar(
-                items: [],
-              ), // TODO: implement
+                items: [
+                  Container(
+                    color: Colors.red,
+                  ),
+                  Container(
+                    color: Colors.orange,
+                  ),
+                  Container(
+                    color: Colors.deepPurple,
+                  ),
+                ],
+              ),
             ],
           ),
         ),
