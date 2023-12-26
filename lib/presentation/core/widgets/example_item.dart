@@ -5,10 +5,12 @@ import 'package:majestica_ds/majestica_ds.dart';
 class ExampleItem extends StatelessWidget {
   final List<Widget> children;
   final MainAxisAlignment mainAxisAlignment;
+  final Axis axis;
 
   const ExampleItem({
     required this.children,
     this.mainAxisAlignment = MainAxisAlignment.spaceBetween,
+    this.axis = Axis.horizontal,
     super.key,
   });
 
@@ -25,10 +27,14 @@ class ExampleItem extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Row(
-            mainAxisAlignment: mainAxisAlignment,
-            children: children,
-          ),
+          child: axis == Axis.horizontal
+              ? Row(
+                  mainAxisAlignment: mainAxisAlignment,
+                  children: children,
+                )
+              : Column(
+                  children: children,
+                ),
         ),
       ),
     );
