@@ -4,10 +4,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:majestica_ds/majestica_ds.dart';
 import 'package:mds_widget_book/domain/actions/button_type.dart';
 
-part 'buttons_data_state.dart';
+part 'buttons_data.dart';
 
-class ButtonsDataCubit extends Cubit<ButtonsDataState> {
-  ButtonsDataCubit() : super(ButtonsDataState());
+class ButtonsDataCubit extends Cubit<ButtonsData> {
+  ButtonsDataCubit() : super(ButtonsData());
 
   void setData({
     required final ButtonType buttonType,
@@ -19,7 +19,7 @@ class ButtonsDataCubit extends Cubit<ButtonsDataState> {
     required final ColorMode colorMode,
     required final Axis axis,
   }) {
-    final newState = ButtonsDataState(
+    final newState = ButtonsData(
       buttonType: buttonType,
       disabled: disabled,
       text: text,
