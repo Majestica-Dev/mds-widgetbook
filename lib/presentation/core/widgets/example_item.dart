@@ -6,11 +6,13 @@ class ExampleItem extends StatelessWidget {
   final List<Widget> children;
   final MainAxisAlignment mainAxisAlignment;
   final EdgeInsetsGeometry padding;
+  final Axis axis;
 
   const ExampleItem({
     required this.children,
     this.mainAxisAlignment = MainAxisAlignment.spaceBetween,
     this.padding = const EdgeInsets.only(left: 16, right: 16, bottom: 12),
+    this.axis = Axis.horizontal,
     super.key,
   });
 
@@ -27,10 +29,14 @@ class ExampleItem extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Row(
-            mainAxisAlignment: mainAxisAlignment,
-            children: children,
-          ),
+          child: axis == Axis.horizontal
+              ? Row(
+                  mainAxisAlignment: mainAxisAlignment,
+                  children: children,
+                )
+              : Column(
+                  children: children,
+                ),
         ),
       ),
     );
