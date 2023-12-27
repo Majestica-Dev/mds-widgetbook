@@ -16,17 +16,19 @@ Widget divider(BuildContext context) {
     padding: EdgeInsets.all(60),
     child: Row(
       children: [
-        Column(
-          children: [
-            DividersCollection(),
-            SizedBox(
-              height: 30,
-            ),
-            DividerExample(),
-          ],
+        SingleChildScrollView(
+          child: Column(
+            children: [
+              DividersCollection(),
+              SizedBox(
+                height: 30,
+              ),
+              DividerExample(),
+            ],
+          ),
         ),
         SizedBox(width: 80),
-        CustomizableDivider()
+        CustomizableDivider(),
       ],
     ),
   );

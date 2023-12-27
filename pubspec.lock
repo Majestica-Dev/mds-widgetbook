@@ -169,6 +169,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.1"
+  copy_with_extension:
+    dependency: transitive
+    description:
+      name: copy_with_extension
+      sha256: fbcf890b0c34aedf0894f91a11a579994b61b4e04080204656b582708b5b1125
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.0.4"
   crypto:
     dependency: transitive
     description:
@@ -368,7 +376,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: eb615d91d55dd8bd851e5cd67e0c9283788afab2
+      resolved-ref: c17fc0b92e75f3931094af59e3bd224158a00a34
       url: "https://github.com/Majestica-Dev/design-system.git"
     source: git
     version: "1.0.1"
