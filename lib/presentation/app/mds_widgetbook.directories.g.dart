@@ -23,11 +23,13 @@ import 'package:mds_widget_book/presentation/navigation/tab_bar/tab_bar.dart'
     as _i7;
 import 'package:mds_widget_book/presentation/selection/checkbox_toggle/checkbox_toggle.dart'
     as _i8;
-import 'package:mds_widget_book/presentation/theme/colors/colors.dart' as _i9;
+import 'package:mds_widget_book/presentation/text_inputs/text_field/text_field.dart'
+    as _i9;
+import 'package:mds_widget_book/presentation/theme/colors/colors.dart' as _i10;
 import 'package:mds_widget_book/presentation/theme/spacing/spacing.dart'
-    as _i10;
-import 'package:mds_widget_book/presentation/theme/typography/typography.dart'
     as _i11;
+import 'package:mds_widget_book/presentation/theme/typography/typography.dart'
+    as _i12;
 import 'package:widgetbook/widgetbook.dart' as _i1;
 
 final directories = <_i1.WidgetbookNode>[
@@ -96,6 +98,18 @@ final directories = <_i1.WidgetbookNode>[
     ],
   ),
   _i1.WidgetbookFolder(
+    name: 'Text Inputs',
+    children: [
+      _i1.WidgetbookLeafComponent(
+        name: 'TextField',
+        useCase: _i1.WidgetbookUseCase(
+          name: 'TextField',
+          builder: _i9.textField,
+        ),
+      )
+    ],
+  ),
+  _i1.WidgetbookFolder(
     name: 'Theme',
     children: [
       _i1.WidgetbookComponent(
@@ -103,15 +117,15 @@ final directories = <_i1.WidgetbookNode>[
         useCases: [
           _i1.WidgetbookUseCase(
             name: 'Colors',
-            builder: _i9.colors,
+            builder: _i10.colors,
           ),
           _i1.WidgetbookUseCase(
             name: 'Spacing',
-            builder: _i10.spacing,
+            builder: _i11.spacing,
           ),
           _i1.WidgetbookUseCase(
             name: 'Typography',
-            builder: _i11.typography,
+            builder: _i12.typography,
           ),
         ],
       )
