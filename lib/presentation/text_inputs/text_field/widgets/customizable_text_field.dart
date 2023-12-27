@@ -22,15 +22,15 @@ class CustomizableTextField extends StatelessWidget {
     );
     final bool showTrailingIcon = context.knobs.boolean(
         label: 'Trailing Icon', initialValue: textFieldData.showTrailingIcon);
-
-    final trailingIcon =
-        showTrailingIcon ? PhosphorIcon(PhosphorIcons.anchor()) : null;
-
+    final trailingIcon = showTrailingIcon
+        ? PhosphorIcon(
+            PhosphorIcons.anchor(),
+          )
+        : null;
     final String? errorMessage = context.knobs.stringOrNull(
       label: 'Error Message',
       initialValue: textFieldData.errorMessage,
     );
-
     final String? successMessage = context.knobs.stringOrNull(
       label: 'Succes Message',
       initialValue: textFieldData.successMessage,
