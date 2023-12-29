@@ -24,14 +24,16 @@ import 'package:mds_widget_book/presentation/navigation/dot_tab_bar/dot_tab_bar.
 import 'package:mds_widget_book/presentation/navigation/tab_bar/tab_bar.dart'
     as _i8;
 import 'package:mds_widget_book/presentation/selection/checkbox_toggle/checkbox_toggle.dart'
-    as _i8;
-import 'package:mds_widget_book/presentation/text_inputs/text_field/text_field.dart'
+    as _i9;
+import 'package:mds_widget_book/presentation/selection/date_picker/date_picker.dart'
     as _i10;
-import 'package:mds_widget_book/presentation/theme/colors/colors.dart' as _i11;
+import 'package:mds_widget_book/presentation/text_inputs/text_field/text_field.dart'
+    as _i11;
+import 'package:mds_widget_book/presentation/theme/colors/colors.dart' as _i12;
 import 'package:mds_widget_book/presentation/theme/spacing/spacing.dart'
-    as _i12;
-import 'package:mds_widget_book/presentation/theme/typography/typography.dart'
     as _i13;
+import 'package:mds_widget_book/presentation/theme/typography/typography.dart'
+    as _i14;
 import 'package:widgetbook/widgetbook.dart' as _i1;
 
 final directories = <_i1.WidgetbookNode>[
@@ -98,10 +100,16 @@ final directories = <_i1.WidgetbookNode>[
     children: [
       _i1.WidgetbookComponent(
         name: 'Selector',
-        useCase: _i1.WidgetbookUseCase(
-          name: 'CheckBox and Toggle',
-          builder: _i8.checkboxAndToggle,
-        ),
+        useCases: [
+          _i1.WidgetbookUseCase(
+            name: 'CheckBox and Toggle',
+            builder: _i9.checkboxAndToggle,
+          ),
+          _i1.WidgetbookUseCase(
+            name: 'Date picker',
+            builder: _i10.checkboxAndToggle,
+          ),
+        ],
       )
     ],
   ),
@@ -112,7 +120,7 @@ final directories = <_i1.WidgetbookNode>[
         name: 'TextField',
         useCase: _i1.WidgetbookUseCase(
           name: 'TextField',
-          builder: _i10.textField,
+          builder: _i11.textField,
         ),
       )
     ],
@@ -125,15 +133,15 @@ final directories = <_i1.WidgetbookNode>[
         useCases: [
           _i1.WidgetbookUseCase(
             name: 'Colors',
-            builder: _i11.colors,
+            builder: _i12.colors,
           ),
           _i1.WidgetbookUseCase(
             name: 'Spacing',
-            builder: _i12.spacing,
+            builder: _i13.spacing,
           ),
           _i1.WidgetbookUseCase(
             name: 'Typography',
-            builder: _i13.typography,
+            builder: _i14.typography,
           ),
         ],
       )
