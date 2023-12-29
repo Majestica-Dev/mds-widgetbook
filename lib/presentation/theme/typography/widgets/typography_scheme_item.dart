@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:majestica_ds/majestica_ds.dart';
 import 'package:mds_widget_book/presentation/core/widgets/example_item.dart';
 
 class TypographySchemeItem extends StatelessWidget {
@@ -13,12 +14,19 @@ class TypographySchemeItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final neautralHighContent = context.mdsTheme.colors.neutralHighContent;
+
     return ExampleItem(
       children: [
-        Text(name),
+        Text(
+          name,
+          style: TextStyle(color: neautralHighContent),
+        ),
         Text(
           'Example Text',
-          style: textStyle,
+          style: textStyle.copyWith(
+            color: neautralHighContent,
+          ),
         ),
       ],
     );
