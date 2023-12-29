@@ -7,24 +7,27 @@ class ExampleItem extends StatelessWidget {
   final MainAxisAlignment mainAxisAlignment;
   final EdgeInsetsGeometry padding;
   final Axis axis;
+  final Color? backColor;
 
   const ExampleItem({
     required this.children,
     this.mainAxisAlignment = MainAxisAlignment.spaceBetween,
     this.padding = const EdgeInsets.only(left: 16, right: 16, bottom: 12),
     this.axis = Axis.horizontal,
+    this.backColor,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     final colors = context.mdsTheme.colors;
+
     return Padding(
       padding: padding,
       child: Container(
         width: 358,
         decoration: BoxDecoration(
-          color: colors.surface,
+          color: backColor ?? colors.surface,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Padding(
