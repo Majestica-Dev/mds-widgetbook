@@ -13,23 +13,27 @@ import 'package:mds_widget_book/presentation/actions/buttons/buttons.dart'
     as _i2;
 import 'package:mds_widget_book/presentation/actions/circle_button/circle_button.dart'
     as _i3;
-import 'package:mds_widget_book/presentation/containment/divider/divider.dart'
+import 'package:mds_widget_book/presentation/containment/bottom_sheet/bottom_sheet.dart'
     as _i4;
-import 'package:mds_widget_book/presentation/navigation/bottom_nav_bar/bottom_nav_bar.dart'
+import 'package:mds_widget_book/presentation/containment/divider/divider.dart'
     as _i5;
-import 'package:mds_widget_book/presentation/navigation/dot_tab_bar/dot_tab_bar.dart'
+import 'package:mds_widget_book/presentation/navigation/bottom_nav_bar/bottom_nav_bar.dart'
     as _i6;
-import 'package:mds_widget_book/presentation/navigation/tab_bar/tab_bar.dart'
+import 'package:mds_widget_book/presentation/navigation/dot_tab_bar/dot_tab_bar.dart'
     as _i7;
-import 'package:mds_widget_book/presentation/selection/checkbox_toggle/checkbox_toggle.dart'
+import 'package:mds_widget_book/presentation/navigation/tab_bar/tab_bar.dart'
     as _i8;
-import 'package:mds_widget_book/presentation/text_inputs/text_field/text_field.dart'
+import 'package:mds_widget_book/presentation/selection/checkbox_toggle/checkbox_toggle.dart'
     as _i9;
-import 'package:mds_widget_book/presentation/theme/colors/colors.dart' as _i10;
-import 'package:mds_widget_book/presentation/theme/spacing/spacing.dart'
+import 'package:mds_widget_book/presentation/selection/date_picker/date_picker.dart'
+    as _i10;
+import 'package:mds_widget_book/presentation/text_inputs/text_field/text_field.dart'
     as _i11;
+import 'package:mds_widget_book/presentation/theme/colors/colors.dart' as _i12;
+import 'package:mds_widget_book/presentation/theme/spacing/spacing.dart'
+    as _i13;
 import 'package:mds_widget_book/presentation/theme/typography/typography.dart'
-    as _i12;
+    as _i14;
 import 'package:widgetbook/widgetbook.dart' as _i1;
 
 final directories = <_i1.WidgetbookNode>[
@@ -54,12 +58,18 @@ final directories = <_i1.WidgetbookNode>[
   _i1.WidgetbookFolder(
     name: 'Containment',
     children: [
-      _i1.WidgetbookLeafComponent(
+      _i1.WidgetbookComponent(
         name: 'Containment',
-        useCase: _i1.WidgetbookUseCase(
-          name: 'Divider',
-          builder: _i4.divider,
-        ),
+        useCases: [
+          _i1.WidgetbookUseCase(
+            name: 'Bottom Sheet',
+            builder: _i4.bottomSheet,
+          ),
+          _i1.WidgetbookUseCase(
+            name: 'Divider',
+            builder: _i5.divider,
+          ),
+        ],
       )
     ],
   ),
@@ -71,15 +81,15 @@ final directories = <_i1.WidgetbookNode>[
         useCases: [
           _i1.WidgetbookUseCase(
             name: 'BottomNavBar',
-            builder: _i5.bottomNavBar,
+            builder: _i6.bottomNavBar,
           ),
           _i1.WidgetbookUseCase(
             name: 'DotTabBar',
-            builder: _i6.tapBar,
+            builder: _i7.tapBar,
           ),
           _i1.WidgetbookUseCase(
             name: 'TabBar',
-            builder: _i7.tapBar,
+            builder: _i8.tapBar,
           ),
         ],
       )
@@ -88,12 +98,18 @@ final directories = <_i1.WidgetbookNode>[
   _i1.WidgetbookFolder(
     name: 'Selection',
     children: [
-      _i1.WidgetbookLeafComponent(
+      _i1.WidgetbookComponent(
         name: 'Selector',
-        useCase: _i1.WidgetbookUseCase(
-          name: 'CheckBox and Toggle',
-          builder: _i8.checkboxAndToggle,
-        ),
+        useCases: [
+          _i1.WidgetbookUseCase(
+            name: 'CheckBox and Toggle',
+            builder: _i9.checkboxAndToggle,
+          ),
+          _i1.WidgetbookUseCase(
+            name: 'Date picker',
+            builder: _i10.checkboxAndToggle,
+          ),
+        ],
       )
     ],
   ),
@@ -104,7 +120,7 @@ final directories = <_i1.WidgetbookNode>[
         name: 'TextField',
         useCase: _i1.WidgetbookUseCase(
           name: 'TextField',
-          builder: _i9.textField,
+          builder: _i11.textField,
         ),
       )
     ],
@@ -117,15 +133,15 @@ final directories = <_i1.WidgetbookNode>[
         useCases: [
           _i1.WidgetbookUseCase(
             name: 'Colors',
-            builder: _i10.colors,
+            builder: _i12.colors,
           ),
           _i1.WidgetbookUseCase(
             name: 'Spacing',
-            builder: _i11.spacing,
+            builder: _i13.spacing,
           ),
           _i1.WidgetbookUseCase(
             name: 'Typography',
-            builder: _i12.typography,
+            builder: _i14.typography,
           ),
         ],
       )

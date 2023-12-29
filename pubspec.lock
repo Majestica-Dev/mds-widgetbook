@@ -5,10 +5,10 @@ packages:
     dependency: transitive
     description:
       name: _fe_analyzer_shared
-      sha256: eb376e9acf6938204f90eb3b1f00b578640d3188b4c8a8ec054f9f479af8d051
+      sha256: "36a321c3d2cbe01cbcb3540a87b8843846e0206df3e691fa7b23e19e78de6d49"
       url: "https://pub.dev"
     source: hosted
-    version: "64.0.0"
+    version: "65.0.0"
   accessibility_tools:
     dependency: transitive
     description:
@@ -21,10 +21,10 @@ packages:
     dependency: transitive
     description:
       name: analyzer
-      sha256: "69f54f967773f6c26c7dcb13e93d7ccee8b17a641689da39e878d5cf13b06893"
+      sha256: dfe03b90ec022450e22513b5e5ca1f01c0c01de9c3fba2f7fd233cb57a6b9a07
       url: "https://pub.dev"
     source: hosted
-    version: "6.2.0"
+    version: "6.3.0"
   args:
     dependency: transitive
     description:
@@ -376,7 +376,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: c17fc0b92e75f3931094af59e3bd224158a00a34
+      resolved-ref: "0bcae12001ca804541e65745f4e9bbbff7be1401"
       url: "https://github.com/Majestica-Dev/design-system.git"
     source: git
     version: "1.0.1"
@@ -460,6 +460,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.5.1"
+  progressive_time_picker:
+    dependency: "direct main"
+    description:
+      name: progressive_time_picker
+      sha256: f3291c7747c7743b1170baf46629e42dc98f210654891e73218acea9994819c3
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   provider:
     dependency: transitive
     description:
@@ -492,6 +500,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
+  scroll_date_picker:
+    dependency: "direct main"
+    description:
+      name: scroll_date_picker
+      sha256: "99f8caf3f1b6a77ba60a2973c2f9061bcf3b3c4c5049f19ec7271ee5d34387c7"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.7.3"
   shelf:
     dependency: transitive
     description:
@@ -629,18 +645,18 @@ packages:
     dependency: transitive
     description:
       name: web_socket_channel
-      sha256: d88238e5eac9a42bb43ca4e721edba3c08c6354d4a53063afaa568516217621b
+      sha256: "045ec2137c27bf1a32e6ffa0e734d532a6677bf9016a0d1a406c54e499ff945b"
       url: "https://pub.dev"
     source: hosted
-    version: "2.4.0"
+    version: "2.4.1"
   widgetbook:
     dependency: "direct main"
     description:
       name: widgetbook
-      sha256: bdbfdc517923218394f11ad4e004a7e3d45672047e9d87f52833ac294366232d
+      sha256: be0588cd864a70bd2817ca2fab0dbd147c460b712cfe53fd13e6fd46b5c3f368
       url: "https://pub.dev"
     source: hosted
-    version: "3.7.0"
+    version: "3.7.1"
   widgetbook_annotation:
     dependency: "direct main"
     description:

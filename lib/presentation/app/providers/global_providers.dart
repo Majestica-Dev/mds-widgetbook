@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mds_widget_book/application/action/buttons/buttons_data_cubit.dart';
+import 'package:mds_widget_book/application/containment/bottom_sheet/bottom_sheet_data_cubit.dart';
 import 'package:mds_widget_book/application/selection/checkbox/checkbox_data_cubit.dart';
 import 'package:mds_widget_book/application/selection/toggle/toggle_data_cubit.dart';
 import 'package:mds_widget_book/application/text_input/text_field_data_cubit.dart';
@@ -38,6 +39,9 @@ class GlobalProviders extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => TextFieldDataCubit(),
+        ),
+        BlocProvider(
+          create: (context) => BottomSheetDataCubit(),
         ),
       ],
       child: child,

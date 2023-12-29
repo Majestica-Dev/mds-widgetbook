@@ -136,7 +136,9 @@ class CustomizableColorsScheme extends StatelessWidget {
                   width: 180,
                   child: Text(
                     'Main tocken',
-                    style: textTheme.bodySBold,
+                    style: textTheme.bodySBold.copyWith(
+                      color: colors.neutralHighContent,
+                    ),
                   ),
                 ),
                 const Spacer(),
@@ -144,7 +146,9 @@ class CustomizableColorsScheme extends StatelessWidget {
                   width: 130,
                   child: Text(
                     'Child tocken',
-                    style: textTheme.bodySBold,
+                    style: textTheme.bodySBold.copyWith(
+                      color: colors.neutralHighContent,
+                    ),
                   ),
                 ),
                 const Spacer(),
@@ -152,7 +156,9 @@ class CustomizableColorsScheme extends StatelessWidget {
                   width: 100,
                   child: Text(
                     'Hex codes',
-                    style: textTheme.bodySBold,
+                    style: textTheme.bodySBold.copyWith(
+                      color: colors.neutralHighContent,
+                    ),
                   ),
                 ),
               ],

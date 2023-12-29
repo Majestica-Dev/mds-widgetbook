@@ -23,13 +23,16 @@ class CustomizableColorSchemeItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = context.mdsTheme.textTheme;
+    final colors = context.mdsTheme.colors;
     return Row(
       children: [
         SizedBox(
           width: 180,
           child: Text(
             mainToken,
-            style: textTheme.bodyMRegular,
+            style: textTheme.bodyMRegular.copyWith(
+              color: colors.neutralHighContent,
+            ),
           ),
         ),
         const Spacer(),
@@ -38,7 +41,9 @@ class CustomizableColorSchemeItem extends StatelessWidget {
                 width: 130,
                 child: Text(
                   '$childToken-100',
-                  style: textTheme.bodyMRegular,
+                  style: textTheme.bodyMRegular.copyWith(
+                    color: colors.neutralHighContent,
+                  ),
                 ),
               )
             : SizedBox(
@@ -47,7 +52,9 @@ class CustomizableColorSchemeItem extends StatelessWidget {
                   children: [
                     Text(
                       '$childToken-',
-                      style: context.mdsTheme.textTheme.bodyMRegular,
+                      style: context.mdsTheme.textTheme.bodyMRegular.copyWith(
+                        color: colors.neutralHighContent,
+                      ),
                     ),
                     SizedBox(
                       width: 35,
@@ -55,7 +62,9 @@ class CustomizableColorSchemeItem extends StatelessWidget {
                       child: TextFormField(
                         onChanged: onChanged,
                         initialValue: '${opacity * 100}',
-                        style: context.mdsTheme.textTheme.bodyMRegular,
+                        style: context.mdsTheme.textTheme.bodyMRegular.copyWith(
+                          color: colors.neutralHighContent,
+                        ),
                         inputFormatters: [
                           NumberTextInputFormatter(
                             integerDigits: 10,
@@ -89,7 +98,10 @@ class CustomizableColorSchemeItem extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 12),
-              Text(color.toHexString),
+              Text(
+                color.toHexString,
+                style: TextStyle(color: colors.primaryHighContent),
+              ),
             ],
           ),
         )

@@ -45,6 +45,16 @@ class CircleButtonExample extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 16),
+                      PrimaryCircleButton(
+                        colorMode: ColorMode.neutral,
+                        onPressed: () {},
+                        child: PhosphorIcon(
+                          PhosphorIcons.alien(
+                            PhosphorIconsStyle.bold,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 16),
                       SecondaryCircleButton(
                         onPressed: () {},
                         child: PhosphorIcon(
@@ -55,6 +65,7 @@ class CircleButtonExample extends StatelessWidget {
                       ),
                       const SizedBox(width: 16),
                       SecondaryCircleButton(
+                        colorMode: ColorMode.neutral,
                         onPressed: () {},
                         child: PhosphorIcon(
                           PhosphorIcons.user(
