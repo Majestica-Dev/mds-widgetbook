@@ -34,7 +34,9 @@ class SpacingScheme extends StatelessWidget {
               children: [
                 Text(
                   'Spacing',
-                  style: t.textTheme.bodySBold,
+                  style: t.textTheme.bodySBold.copyWith(
+                    color: t.colors.neutralHighContent,
+                  ),
                 ),
                 const SizedBox(height: 30),
                 for (var i = 0; i < 11; i++)
@@ -53,7 +55,9 @@ class SpacingScheme extends StatelessWidget {
               children: [
                 Text(
                   'Name',
-                  style: t.textTheme.bodySBold,
+                  style: t.textTheme.bodySBold.copyWith(
+                    color: t.colors.neutralHighContent,
+                  ),
                 ),
                 const SizedBox(height: 30),
                 for (var i = 0; i < 11; i++)
@@ -70,7 +74,9 @@ class SpacingScheme extends StatelessWidget {
               children: [
                 Text(
                   'Value',
-                  style: t.textTheme.bodySBold,
+                  style: t.textTheme.bodySBold.copyWith(
+                    color: t.colors.neutralHighContent,
+                  ),
                 ),
                 const SizedBox(height: 30),
                 for (var i = 0; i < 11; i++)

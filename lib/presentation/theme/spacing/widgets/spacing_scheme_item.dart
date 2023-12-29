@@ -3,6 +3,7 @@ import 'package:majestica_ds/majestica_ds.dart';
 
 class SpacingSchemeItem extends StatelessWidget {
   final double value;
+
   const SpacingSchemeItem({
     required this.value,
     super.key,
@@ -11,6 +12,7 @@ class SpacingSchemeItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = context.mdsTheme;
+
     return Row(
       children: [
         Container(
@@ -18,15 +20,19 @@ class SpacingSchemeItem extends StatelessWidget {
           height: 20,
           width: value,
         ),
-        Spacer(),
+        const Spacer(),
         Text(
           '${value / 4} space',
-          style: t.textTheme.bodySRegular,
+          style: t.textTheme.bodySRegular.copyWith(
+            color: t.colors.neutralHighContent,
+          ),
         ),
-        Spacer(),
+        const Spacer(),
         Text(
           '$value px',
-          style: t.textTheme.bodyMRegular,
+          style: t.textTheme.bodyMRegular.copyWith(
+            color: t.colors.neutralHighContent,
+          ),
         ),
       ],
     );
