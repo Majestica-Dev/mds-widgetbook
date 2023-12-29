@@ -11,6 +11,7 @@ class TypographyScheme extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = context.mdsTheme.textTheme;
+    final colors = context.mdsTheme.colors;
 
     return ExampleDisplay(
       height: null,
@@ -22,7 +23,9 @@ class TypographyScheme extends StatelessWidget {
             const SizedBox(height: 20),
             Text(
               'Regular',
-              style: textTheme.bodyMRegular,
+              style: textTheme.bodyMRegular.copyWith(
+              color: colors.primaryHighContent,
+            ),
             ),
             const SizedBox(height: 20),
             TypographySchemeItem(
@@ -60,7 +63,9 @@ class TypographyScheme extends StatelessWidget {
             const SizedBox(height: 50),
             Text(
               'Bold',
-              style: textTheme.bodyMBold,
+              style: textTheme.bodyMBold.copyWith(
+              color: colors.primaryHighContent,
+            ),
             ),
             const SizedBox(height: 20),
             TypographySchemeItem(

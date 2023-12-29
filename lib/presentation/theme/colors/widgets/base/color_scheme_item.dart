@@ -15,6 +15,8 @@ class ColorsSchemeItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = context.mdsTheme.textTheme;
+    final colors = context.mdsTheme.colors;
+
     return Container(
       width: double.infinity,
       color: color,
@@ -22,7 +24,9 @@ class ColorsSchemeItem extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Text(
           name,
-          style: textTheme.bodyMRegular,
+          style: textTheme.bodyMRegular.copyWith(
+            color: colors.neutralHighContent,
+          ),
         ),
       ),
     );
