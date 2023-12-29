@@ -21,6 +21,9 @@ dependencies:
   flutter_lints: ^3.0.1
   equatable: ^2.0.5
   number_text_input_formatter: ^1.0.0+7
+  scroll_date_picker: ^3.7.3
+  progressive_time_picker: ^1.0.0
+
   
 
 dev_dependencies:
