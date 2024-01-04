@@ -24,8 +24,8 @@ class TypographyScheme extends StatelessWidget {
             Text(
               'Regular',
               style: textTheme.bodyMRegular.copyWith(
-              color: colors.primaryHighContent,
-            ),
+                color: colors.primaryHighContent,
+              ),
             ),
             const SizedBox(height: 20),
             TypographySchemeItem(
@@ -45,27 +45,27 @@ class TypographyScheme extends StatelessWidget {
               textStyle: textTheme.headlineRegular,
             ),
             TypographySchemeItem(
-              name: 'Title2',
-              textStyle: textTheme.title2Bold,
+              name: 'Title3',
+              textStyle: textTheme.title3Regular,
             ),
             TypographySchemeItem(
-              name: 'Title3',
-              textStyle: textTheme.title3Bold,
+              name: 'Title2',
+              textStyle: textTheme.title2Regular,
             ),
             TypographySchemeItem(
               name: 'Title1',
-              textStyle: textTheme.title1Bold,
+              textStyle: textTheme.title1Regular,
             ),
             TypographySchemeItem(
               name: 'Title Large',
-              textStyle: textTheme.titleLargeBold,
+              textStyle: textTheme.titleLargeRegular,
             ),
             const SizedBox(height: 50),
             Text(
               'Bold',
               style: textTheme.bodyMBold.copyWith(
-              color: colors.primaryHighContent,
-            ),
+                color: colors.primaryHighContent,
+              ),
             ),
             const SizedBox(height: 20),
             TypographySchemeItem(
@@ -86,19 +86,19 @@ class TypographyScheme extends StatelessWidget {
             ),
             TypographySchemeItem(
               name: 'Title3',
-              textStyle: textTheme.title3Regular,
+              textStyle: textTheme.title3Bold,
             ),
             TypographySchemeItem(
               name: 'Title2',
-              textStyle: textTheme.title2Regular,
+              textStyle: textTheme.title2Bold,
             ),
             TypographySchemeItem(
               name: 'Title1',
-              textStyle: textTheme.title1Regular,
+              textStyle: textTheme.title1Bold,
             ),
             TypographySchemeItem(
               name: 'Title Large',
-              textStyle: textTheme.titleLargeRegular,
+              textStyle: textTheme.titleLargeBold,
             ),
           ],
         ),
