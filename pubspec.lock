@@ -254,6 +254,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.1"
+  flutter_svg:
+    dependency: "direct main"
+    description:
+      name: flutter_svg
+      sha256: d39e7f95621fc84376bc0f7d504f05c3a41488c562f4a8ad410569127507402c
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.9"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -376,7 +384,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "0bcae12001ca804541e65745f4e9bbbff7be1401"
+      resolved-ref: "02e7d5f4c8f0d62aa0bfca6bafb82231ab8e1b27"
       url: "https://github.com/Majestica-Dev/design-system.git"
     source: git
     version: "1.0.1"
@@ -444,6 +452,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
+  path_parsing:
+    dependency: transitive
+    description:
+      name: path_parsing
+      sha256: e3e67b1629e6f7e8100b367d3db6ba6af4b1f0bb80f64db18ef1fbabd2fa9ccf
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
+  petitparser:
+    dependency: transitive
+    description:
+      name: petitparser
+      sha256: c15605cd28af66339f8eb6fbe0e541bfe2d1b72d5825efc6598f3e0a31b9ad27
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.0.2"
   phosphor_flutter:
     dependency: transitive
     description:
@@ -460,14 +484,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.5.1"
-  progressive_time_picker:
-    dependency: "direct main"
-    description:
-      name: progressive_time_picker
-      sha256: f3291c7747c7743b1170baf46629e42dc98f210654891e73218acea9994819c3
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.0"
   provider:
     dependency: transitive
     description:
@@ -500,14 +516,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
-  scroll_date_picker:
-    dependency: "direct main"
-    description:
-      name: scroll_date_picker
-      sha256: "99f8caf3f1b6a77ba60a2973c2f9061bcf3b3c4c5049f19ec7271ee5d34387c7"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.7.3"
   shelf:
     dependency: transitive
     description:
@@ -609,6 +617,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.2"
+  vector_graphics:
+    dependency: transitive
+    description:
+      name: vector_graphics
+      sha256: "0f0c746dd2d6254a0057218ff980fc7f5670fd0fcf5e4db38a490d31eed4ad43"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.9+1"
+  vector_graphics_codec:
+    dependency: transitive
+    description:
+      name: vector_graphics_codec
+      sha256: "0edf6d630d1bfd5589114138ed8fada3234deacc37966bec033d3047c29248b7"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.9+1"
+  vector_graphics_compiler:
+    dependency: transitive
+    description:
+      name: vector_graphics_compiler
+      sha256: d24333727332d9bd20990f1483af4e09abdb9b1fc7c3db940b56ab5c42790c26
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.9+1"
   vector_math:
     dependency: transitive
     description:
@@ -645,10 +677,10 @@ packages:
     dependency: transitive
     description:
       name: web_socket_channel
-      sha256: "045ec2137c27bf1a32e6ffa0e734d532a6677bf9016a0d1a406c54e499ff945b"
+      sha256: cc1f6c632a248278a091fd7d9a68f624906830f7c1c5aa66503fae0804633e1c
       url: "https://pub.dev"
     source: hosted
-    version: "2.4.1"
+    version: "2.4.2"
   widgetbook:
     dependency: "direct main"
     description:
@@ -673,6 +705,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.7.0"
+  xml:
+    dependency: transitive
+    description:
+      name: xml
+      sha256: b015a8ad1c488f66851d762d3090a21c600e479dc75e68328c52774040cf9226
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.5.0"
   yaml:
     dependency: transitive
     description:

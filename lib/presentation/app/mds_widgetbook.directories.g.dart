@@ -17,23 +17,25 @@ import 'package:mds_widget_book/presentation/containment/bottom_sheet/bottom_she
     as _i4;
 import 'package:mds_widget_book/presentation/containment/divider/divider.dart'
     as _i5;
-import 'package:mds_widget_book/presentation/navigation/bottom_nav_bar/bottom_nav_bar.dart'
+import 'package:mds_widget_book/presentation/example_screens/example_screens.dart'
     as _i6;
-import 'package:mds_widget_book/presentation/navigation/dot_tab_bar/dot_tab_bar.dart'
+import 'package:mds_widget_book/presentation/navigation/bottom_nav_bar/bottom_nav_bar.dart'
     as _i7;
-import 'package:mds_widget_book/presentation/navigation/tab_bar/tab_bar.dart'
+import 'package:mds_widget_book/presentation/navigation/dot_tab_bar/dot_tab_bar.dart'
     as _i8;
-import 'package:mds_widget_book/presentation/selection/checkbox_toggle/checkbox_toggle.dart'
+import 'package:mds_widget_book/presentation/navigation/tab_bar/tab_bar.dart'
     as _i9;
+import 'package:mds_widget_book/presentation/selection/checkbox_toggle/checkbox_toggle.dart'
+    as _i11;
 import 'package:mds_widget_book/presentation/selection/date_picker/date_picker.dart'
     as _i10;
 import 'package:mds_widget_book/presentation/text_inputs/text_field/text_field.dart'
-    as _i11;
-import 'package:mds_widget_book/presentation/theme/colors/colors.dart' as _i12;
+    as _i12;
+import 'package:mds_widget_book/presentation/theme/colors/colors.dart' as _i13;
 import 'package:mds_widget_book/presentation/theme/spacing/spacing.dart'
-    as _i13;
-import 'package:mds_widget_book/presentation/theme/typography/typography.dart'
     as _i14;
+import 'package:mds_widget_book/presentation/theme/typography/typography.dart'
+    as _i15;
 import 'package:widgetbook/widgetbook.dart' as _i1;
 
 final directories = <_i1.WidgetbookNode>[
@@ -74,6 +76,18 @@ final directories = <_i1.WidgetbookNode>[
     ],
   ),
   _i1.WidgetbookFolder(
+    name: 'Example Screens',
+    children: [
+      _i1.WidgetbookLeafComponent(
+        name: 'ExampleScreens',
+        useCase: _i1.WidgetbookUseCase(
+          name: 'ExampleScreens',
+          builder: _i6.exampleScreens,
+        ),
+      )
+    ],
+  ),
+  _i1.WidgetbookFolder(
     name: 'Navigation',
     children: [
       _i1.WidgetbookComponent(
@@ -81,15 +95,15 @@ final directories = <_i1.WidgetbookNode>[
         useCases: [
           _i1.WidgetbookUseCase(
             name: 'BottomNavBar',
-            builder: _i6.bottomNavBar,
+            builder: _i7.bottomNavBar,
           ),
           _i1.WidgetbookUseCase(
             name: 'DotTabBar',
-            builder: _i7.tapBar,
+            builder: _i8.tapBar,
           ),
           _i1.WidgetbookUseCase(
             name: 'TabBar',
-            builder: _i8.tapBar,
+            builder: _i9.tapBar,
           ),
         ],
       )
@@ -98,19 +112,20 @@ final directories = <_i1.WidgetbookNode>[
   _i1.WidgetbookFolder(
     name: 'Selection',
     children: [
-      _i1.WidgetbookComponent(
+      _i1.WidgetbookLeafComponent(
+        name: 'CupertinoDatePicker',
+        useCase: _i1.WidgetbookUseCase(
+          name: 'Date Picker',
+          builder: _i10.datePicker,
+        ),
+      ),
+      _i1.WidgetbookLeafComponent(
         name: 'Selector',
-        useCases: [
-          _i1.WidgetbookUseCase(
-            name: 'CheckBox and Toggle',
-            builder: _i9.checkboxAndToggle,
-          ),
-          _i1.WidgetbookUseCase(
-            name: 'Date picker',
-            builder: _i10.checkboxAndToggle,
-          ),
-        ],
-      )
+        useCase: _i1.WidgetbookUseCase(
+          name: 'CheckBox and Toggle',
+          builder: _i11.checkboxAndToggle,
+        ),
+      ),
     ],
   ),
   _i1.WidgetbookFolder(
@@ -120,7 +135,7 @@ final directories = <_i1.WidgetbookNode>[
         name: 'TextField',
         useCase: _i1.WidgetbookUseCase(
           name: 'TextField',
-          builder: _i11.textField,
+          builder: _i12.textField,
         ),
       )
     ],
@@ -133,15 +148,15 @@ final directories = <_i1.WidgetbookNode>[
         useCases: [
           _i1.WidgetbookUseCase(
             name: 'Colors',
-            builder: _i12.colors,
+            builder: _i13.colors,
           ),
           _i1.WidgetbookUseCase(
             name: 'Spacing',
-            builder: _i13.spacing,
+            builder: _i14.spacing,
           ),
           _i1.WidgetbookUseCase(
             name: 'Typography',
-            builder: _i14.typography,
+            builder: _i15.typography,
           ),
         ],
       )
