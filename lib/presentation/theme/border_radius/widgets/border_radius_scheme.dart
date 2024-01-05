@@ -10,15 +10,17 @@ class BorderRadiusScheme extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = context.mdsTheme;
-    final List<Map<String, double>> borderRadius = [
-      {'Br 1': 2},
-      {'Br 2': 4},
-      {'Br 3': 8},
-      {'Br 4': 14},
-      {'Br 5': 16},
-      {'Br 6': 20},
-      {'Br 7': 32},
-      {'All': 500},
+    final br = t.borderRadius;
+
+    final List<Map<String, double>> brList = [
+      {'Br 1': br.r1},
+      {'Br 2': br.r2},
+      {'Br 3': br.r3},
+      {'Br 4': br.r4},
+      {'Br 5': br.r5},
+      {'Br 6': br.r6},
+      {'Br 7': br.r7},
+      {'All': br.all},
     ];
 
     return Padding(
@@ -60,7 +62,7 @@ class BorderRadiusScheme extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 30),
-                for (Map<String, double> i in borderRadius)
+                for (Map<String, double> i in brList)
                   Padding(
                     padding: const EdgeInsets.only(bottom: 25),
                     child: Row(
