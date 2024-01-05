@@ -18,29 +18,34 @@ class TextFieldExamples extends StatelessWidget {
           children: [
             MDSSearchField(
               controller: TextEditingController(),
+              focusNode: FocusNode(),
             ),
             const SizedBox(height: 20),
             MDSTextField(
               label: 'Text Label',
               hintText: 'Example Text',
+              focusNode: FocusNode(),
             ),
             const SizedBox(height: 20),
             MDSTextField(
               label: 'Text Label',
               hintText: 'Example Text',
               errorMessage: 'Error Message',
+              focusNode: FocusNode(),
             ),
             const SizedBox(height: 20),
             MDSTextField(
               label: 'Text Label',
               hintText: 'Example Text',
               successMessage: 'Succes Message',
+              focusNode: FocusNode(),
             ),
             const SizedBox(height: 20),
             MDSTextField(
               trailingIcon: PhosphorIcon(PhosphorIcons.alien()),
               label: 'Text Label',
               hintText: 'Example Text',
+              focusNode: FocusNode(),
             ),
             const SizedBox(height: 20),
           ],

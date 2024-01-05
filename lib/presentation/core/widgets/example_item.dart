@@ -8,12 +8,14 @@ class ExampleItem extends StatelessWidget {
   final EdgeInsetsGeometry padding;
   final Axis axis;
   final Color? backColor;
+  final BoxBorder? border;
 
   const ExampleItem({
     required this.children,
     this.mainAxisAlignment = MainAxisAlignment.spaceBetween,
     this.padding = const EdgeInsets.only(left: 16, right: 16, bottom: 12),
     this.axis = Axis.horizontal,
+    this.border,
     this.backColor,
     super.key,
   });
@@ -29,6 +31,7 @@ class ExampleItem extends StatelessWidget {
         decoration: BoxDecoration(
           color: backColor ?? colors.surface,
           borderRadius: BorderRadius.circular(12),
+          border: border,
         ),
         child: Padding(
           padding: const EdgeInsets.all(16),
