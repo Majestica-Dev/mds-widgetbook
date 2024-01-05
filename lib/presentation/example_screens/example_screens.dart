@@ -11,7 +11,6 @@ abstract final class ExampleScreens {}
   type: ExampleScreens,
 )
 Widget exampleScreens(BuildContext context) {
-  print(Uri.base.fragment);
   return const Padding(
     padding: EdgeInsets.symmetric(horizontal: 10),
     child: Row(
