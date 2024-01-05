@@ -66,7 +66,7 @@ class LoveScreen extends StatelessWidget {
                       '1.Physical toch.',
                       style: textTheme.bodyMRegular,
                     ),
-                    Checkbox(
+                    MDSCheckBox(
                       value: false,
                       onChanged: (value) {},
                     )
@@ -81,7 +81,7 @@ class LoveScreen extends StatelessWidget {
                       '2. Receiving gifts.',
                       style: textTheme.bodyMRegular,
                     ),
-                    Checkbox(
+                    MDSCheckBox(
                       value: false,
                       onChanged: (value) {},
                     )
@@ -96,7 +96,7 @@ class LoveScreen extends StatelessWidget {
                       '3. Words of affirmation.',
                       style: textTheme.bodyMRegular,
                     ),
-                    Checkbox(
+                    MDSCheckBox(
                       value: true,
                       onChanged: (value) {},
                     )
