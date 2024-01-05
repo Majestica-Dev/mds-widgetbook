@@ -14,11 +14,17 @@ class RadioExamples extends StatefulWidget {
 }
 
 class _RadioExamplesState extends State<RadioExamples> {
-  bool radioOnValue = true;
-  bool radioOffValue = false;
+  bool radio1Value = true;
+  bool radio2Value = false;
 
   @override
   Widget build(BuildContext context) {
+    final Color primaryHighContent = context.mdsTheme.colors.primaryHighContent;
+
+    final BoxBorder? radio1Border =
+        radio1Value ? Border.all(color: primaryHighContent) : null;
+    final BoxBorder? radio2Border =
+        radio2Value ? Border.all(color: primaryHighContent) : null;
     return ExampleDisplay(
       height: null,
       width: null,
@@ -27,28 +33,30 @@ class _RadioExamplesState extends State<RadioExamples> {
         children: [
           const SizedBox(height: 21),
           ExampleItem(
+            border: radio1Border,
             children: [
               const Text('Radio on'),
               RadioButton(
                 onChanged: (value) {
                   setState(() {
-                    radioOnValue = value;
+                    radio1Value = value;
                   });
                 },
-                value: radioOnValue,
-              ),
+                value: radio1Value,
+              )
             ],
           ),
           ExampleItem(
+            border: radio2Border,
             children: [
               const Text('Radio off'),
               RadioButton(
                 onChanged: (value) {
                   setState(() {
-                    radioOffValue = value;
+                    radio2Value = value;
                   });
                 },
-                value: radioOffValue,
+                value: radio2Value,
               ),
             ],
           ),
