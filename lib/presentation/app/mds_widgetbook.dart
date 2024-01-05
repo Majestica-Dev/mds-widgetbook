@@ -25,6 +25,11 @@ class MDSWidgetbook extends StatelessWidget {
               spacing: themeState.spacing,
             ),
             child: Widgetbook.material(
+              initialRoute:
+                  '/?path=example-screens/examplescreens/examplescreens',
+              addons: [
+                InspectorAddon(),
+              ],
               directories: directories,
             ),
           );

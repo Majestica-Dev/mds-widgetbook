@@ -33,11 +33,13 @@ import 'package:mds_widget_book/presentation/selection/radio/radio.dart'
     as _i12;
 import 'package:mds_widget_book/presentation/text_inputs/text_field/text_field.dart'
     as _i13;
-import 'package:mds_widget_book/presentation/theme/colors/colors.dart' as _i14;
+import 'package:mds_widget_book/presentation/theme/border_radius/border_radius.dart'
+    as _i14;
+import 'package:mds_widget_book/presentation/theme/colors/colors.dart' as _i15;
 import 'package:mds_widget_book/presentation/theme/spacing/spacing.dart'
-    as _i15;
-import 'package:mds_widget_book/presentation/theme/typography/typography.dart'
     as _i16;
+import 'package:mds_widget_book/presentation/theme/typography/typography.dart'
+    as _i17;
 import 'package:widgetbook/widgetbook.dart' as _i1;
 
 final directories = <_i1.WidgetbookNode>[
@@ -155,16 +157,20 @@ final directories = <_i1.WidgetbookNode>[
         name: 'MDSTheme',
         useCases: [
           _i1.WidgetbookUseCase(
+            name: 'Border Radius',
+            builder: _i14.borderRadius,
+          ),
+          _i1.WidgetbookUseCase(
             name: 'Colors',
-            builder: _i14.colors,
+            builder: _i15.colors,
           ),
           _i1.WidgetbookUseCase(
             name: 'Spacing',
-            builder: _i15.spacing,
+            builder: _i16.spacing,
           ),
           _i1.WidgetbookUseCase(
             name: 'Typography',
-            builder: _i16.typography,
+            builder: _i17.typography,
           ),
         ],
       )
