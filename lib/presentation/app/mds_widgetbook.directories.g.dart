@@ -141,7 +141,7 @@ final directories = <_i1.WidgetbookNode>[
         useCases: [
           _i1.WidgetbookUseCase(
             name: 'Border Radius',
-            builder: _i12.spacing,
+            builder: _i12.borderRadius,
           ),
           _i1.WidgetbookUseCase(
             name: 'Colors',
