@@ -29,13 +29,15 @@ import 'package:mds_widget_book/presentation/selection/checkbox_toggle/checkbox_
     as _i11;
 import 'package:mds_widget_book/presentation/selection/date_picker/date_picker.dart'
     as _i10;
-import 'package:mds_widget_book/presentation/text_inputs/text_field/text_field.dart'
+import 'package:mds_widget_book/presentation/selection/radio/radio.dart'
     as _i12;
-import 'package:mds_widget_book/presentation/theme/colors/colors.dart' as _i13;
+import 'package:mds_widget_book/presentation/text_inputs/text_field/text_field.dart'
+    as _i13;
+import 'package:mds_widget_book/presentation/theme/colors/colors.dart' as _i14;
 import 'package:mds_widget_book/presentation/theme/spacing/spacing.dart'
-    as _i14;
-import 'package:mds_widget_book/presentation/theme/typography/typography.dart'
     as _i15;
+import 'package:mds_widget_book/presentation/theme/typography/typography.dart'
+    as _i16;
 import 'package:widgetbook/widgetbook.dart' as _i1;
 
 final directories = <_i1.WidgetbookNode>[
@@ -119,12 +121,18 @@ final directories = <_i1.WidgetbookNode>[
           builder: _i10.datePicker,
         ),
       ),
-      _i1.WidgetbookLeafComponent(
+      _i1.WidgetbookComponent(
         name: 'Selector',
-        useCase: _i1.WidgetbookUseCase(
-          name: 'CheckBox and Toggle',
-          builder: _i11.checkboxAndToggle,
-        ),
+        useCases: [
+          _i1.WidgetbookUseCase(
+            name: 'CheckBox and Toggle',
+            builder: _i11.checkboxAndToggle,
+          ),
+          _i1.WidgetbookUseCase(
+            name: 'Radio',
+            builder: _i12.radio,
+          ),
+        ],
       ),
     ],
   ),
@@ -135,7 +143,7 @@ final directories = <_i1.WidgetbookNode>[
         name: 'TextField',
         useCase: _i1.WidgetbookUseCase(
           name: 'TextField',
-          builder: _i12.textField,
+          builder: _i13.textField,
         ),
       )
     ],
@@ -148,15 +156,15 @@ final directories = <_i1.WidgetbookNode>[
         useCases: [
           _i1.WidgetbookUseCase(
             name: 'Colors',
-            builder: _i13.colors,
+            builder: _i14.colors,
           ),
           _i1.WidgetbookUseCase(
             name: 'Spacing',
-            builder: _i14.spacing,
+            builder: _i15.spacing,
           ),
           _i1.WidgetbookUseCase(
             name: 'Typography',
-            builder: _i15.typography,
+            builder: _i16.typography,
           ),
         ],
       )

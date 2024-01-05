@@ -62,6 +62,7 @@ class CustomizableDatePicker extends StatelessWidget {
       width: wrapperWidth,
       height: wrapperheight,
       child: MDSDatePicker(
+        // TODO : (Narek) wiil find other solution for correct recreating
         key: UniqueKey(),
         mode: mode,
         textColor: textColor,
