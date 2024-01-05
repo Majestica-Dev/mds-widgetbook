@@ -8,6 +8,8 @@ class DatePickerExamples extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExampleDisplay(
+      width: null,
+      height: null,
       body: Column(
         children: [
           const SizedBox(height: 20),

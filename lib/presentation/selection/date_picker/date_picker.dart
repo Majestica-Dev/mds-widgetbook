@@ -15,8 +15,10 @@ Widget datePicker(BuildContext context) {
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        DatePickerExamples(),
-        CustomizableDatePicker(),
+        Flexible(child: DatePickerExamples()),
+        SizedBox(width: 20),
+        Flexible(child: CustomizableDatePicker()),
+        SizedBox(width: 20),
       ],
     ),
   );
