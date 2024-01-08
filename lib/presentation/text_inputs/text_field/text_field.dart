@@ -12,13 +12,16 @@ import 'package:mds_widget_book/presentation/text_inputs/text_field/widgets/text
 )
 Widget textField(BuildContext context) {
   return const Center(
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        TextFieldExamples(),
-        SizedBox(width: 30),
-        CustomizableTextField(),
-      ],
+    child: SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          TextFieldExamples(),
+          SizedBox(width: 30),
+          CustomizableTextField(),
+        ],
+      ),
     ),
   );
 }
