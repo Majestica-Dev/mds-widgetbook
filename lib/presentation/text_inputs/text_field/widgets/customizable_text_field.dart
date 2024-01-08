@@ -47,6 +47,7 @@ class CustomizableTextField extends StatelessWidget {
     return SizedBox(
       width: 400,
       child: MDSTextField(
+        controller: TextEditingController(),
         label: label,
         hintText: hintText,
         trailingIcon: trailingIcon,
