@@ -21,6 +21,11 @@ class TextFieldExamples extends StatelessWidget {
               focusNode: FocusNode(),
             ),
             const SizedBox(height: 20),
+            MDSSearchField(
+              controller: TextEditingController(text: 'Typing'),
+              focusNode: FocusNode(),
+            ),
+            const SizedBox(height: 20),
             MDSTextField(
               label: 'Text Label',
               hintText: 'Example Text',
@@ -48,6 +53,25 @@ class TextFieldExamples extends StatelessWidget {
               focusNode: FocusNode(),
             ),
             const SizedBox(height: 20),
+            MDSTextField(
+              hintText: 'Example Text',
+              errorMessage: 'Error Message',
+              focusNode: FocusNode(),
+              controller: TextEditingController(text: 'Filled Input'),
+            ),
+            const SizedBox(height: 20),
+            MDSTextField(
+              hintText: 'Example Text',
+              successMessage: 'Succes Message',
+              focusNode: FocusNode(),
+              controller: TextEditingController(text: 'Filled Input'),
+            ),
+            const SizedBox(height: 20),
+            MDSTextField(
+              hintText: 'Example Text',
+              focusNode: FocusNode(),
+              controller: TextEditingController(text: 'Filled Input'),
+            ),
           ],
         ),
       ),
