@@ -17,8 +17,10 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
 
   @override
   Widget build(BuildContext context) {
+    final backgroundColor = context.mdsTheme.colors.surface;
     return ExampleDisplay(
       body: Scaffold(
+        backgroundColor: backgroundColor,
         bottomNavigationBar: MDSBottomNavBar(
           currentIndex: currentIndex,
           onSelect: (value) {
