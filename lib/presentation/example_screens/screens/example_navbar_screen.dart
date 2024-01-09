@@ -28,6 +28,7 @@ class _ExampleNavBarScreenState extends State<ExampleNavBarScreen> {
     final t = context.mdsTheme;
 
     return Scaffold(
+      backgroundColor: t.colors.background,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: t.spacing.x4),
         child: _screens[navBarIndex],
