@@ -30,11 +30,13 @@ class ButtomSheetItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Color backgroundColor = context.mdsTheme.colors.background;
     return ExampleDisplay(
       width: width,
       body: MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
+          backgroundColor: backgroundColor,
           floatingActionButton: Builder(
             builder: (context) {
               Future.delayed(const Duration(milliseconds: 0)).then((value) {

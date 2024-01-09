@@ -13,7 +13,7 @@ class ColorsScheme extends StatelessWidget {
     return ExampleDisplay(
       width: 440,
       height: null,
-      backgroundColor: Colors.white,
+      backgroundColor: colors.background,
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: SingleChildScrollView(
